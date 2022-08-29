@@ -1,0 +1,11 @@
+            \  \//\  \///  _ \/ |/ /
+             \  /  \  / | / \||   /
+             / /   / /  | \_/||   \
+            /_/   /_/   \____/\_|\_\
+
+ :: Application Version::  ${yyok.version}
+ :: Spring Boot ::       ${spring-boot.version}
+
+
+
+

@@ -1,0 +1,258 @@
+server:
+  port: 8000
+
+spring:
+  aop:
+    proxy-target-class: true
+    auto: true
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 200MB
+      max-request-size: 200MB
+  main:
+    allow-circular-references: true
+    allow-bean-definition-overriding: true
+  freemarker:
+    check-template-location: false
+  profiles:
+    active: dev
+  jackson:
+    time-zone: GMT+8
+  data:
+    redis:
+      repositories:
+        enabled: false
+  boot:
+    admin:
+      client:
+        instance:
+          # 使用ip注册进来
+          prefer-ip: true
+        # admin-server地址
+        url: http://127.0.0.1:9000
+        # admin-server security用户名
+        username: yyok
+        # admin-server security密码
+        password: yyok
+security:
+  basic:
+    enabled: false
+  user:
+    name: yyok
+    password: yyok
+  oauth2:
+    client:
+        clientId: YYOKClientId
+        clientSecret: secret
+        accessTokenUri: http://${sever.ip}:${server.port}/api/oauth/token
+        userAuthorizationUri: http://${sever.ip}:${server.port}/api/oauth/authorize
+        registration:
+          messaging-client-oidc:
+            provider: spring
+            client-id: messaging-client
+            client-secret: secret
+            authorization-grant-type: authorization_code
+            redirect-uri: "http://${sever.ip}:${server.port}/api/oauth2/code/{registrationId}"
+            scope: openid
+            client-name: messaging-client-oidc
+          messaging-client-authorization-code:
+            provider: spring
+            client-id: messaging-client
+            client-secret: secret
+            authorization-grant-type: authorization_code
+            redirect-uri: "http://${sever.ip}:${server.port}/authorized"
+            scope: message.read,message.write
+            client-name: messaging-client-authorization-code
+          messaging-client-client-credentials:
+            provider: spring
+            client-id: messaging-client
+            client-secret: secret
+            authorization-grant-type: client_credentials
+            scope: message.read,message.write
+            client-name: messaging-client-client-credentials
+        provider:
+          spring:
+            issuer-uri: http://${sever.ip}:${server.port}
+  resource:
+    userInfoUri: http://${sever.ip}:${server.port}/api/auth/user/me
+
+
+# Oauth2资源服务资源访问地址
+messages:
+  base-uri: http://192.168.137.139:8090/messages
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+task:
+  pool:
+    # 核心线程池大小
+    core-pool-size: 20
+    # 最大线程数
+    max-pool-size: 50
+    # 活跃时间
+    keep-alive-seconds: 300
+    # 队列容量
+    queue-capacity: 50
+#是否允许生成代码，生产环境设置为:1
+generator:
+  enabled: 1
+
+#是否开启 swagger-ui
+swagger:
+  enabled: true
+  title: 管理后台API
+  serverUrl:
+  version: 1.0.0
+springfox:
+  documentation:
+    swagger-ui:
+      enabled: false
+    open-api:
+      enabled: false
+#七牛云
+qiniu:
+  # 文件大小 /M
+  max-size: 15
+
+#邮箱验证码有效时间/分钟
+code:
+  expiration: 5
+
+#登录图形验证码有效时间/分钟
+loginCode:
+  expiration: 2
+
+#密码加密传输，前端公钥加密，后端私钥解密
+rsa:
+  private_key: MIIBUwIBADANBgkqhkiG9w0BAQEFAASCAT0wggE5AgEAAkEA0vfvyTdGJkdbHkB8mp0f3FE0GYP3AYPaJF7jUd1M0XxFSE2ceK3k2kw20YvQ09NJKk+OMjWQl9WitG9pB6tSCQIDAQABAkA2SimBrWC2/wvauBuYqjCFwLvYiRYqZKThUS3MZlebXJiLB+Ue/gUifAAKIg1avttUZsHBHrop4qfJCwAI0+YRAiEA+W3NK/RaXtnRqmoUUkb59zsZUBLpvZgQPfj1MhyHDz0CIQDYhsAhPJ3mgS64NbUZmGWuuNKp5coY2GIj/zYDMJp6vQIgUueLFXv/eZ1ekgz2Oi67MNCk5jeTF2BurZqNLR3MSmUCIFT3Q6uHMtsB9Eha4u7hS31tj1UWE+D+ADzp59MGnoftAiBeHT7gDMuqeJHPL4b+kC+gzV4FGTfhR9q3tTbklZkD2A==
+
+# sm.ms 图床的 token
+smms:
+  token: 1oOP3ykFDI0K6ifmtvU7c8Y1eTWZSlyl
+
+#日志级别配置
+logging:
+  level:
+    com:
+      yyok: DEBUG
+      baomidou: DEBUG
+    org:
+      mybatis:
+        dynamic: DEBUG
+      springframework:
+        web: ERROR
+        security:
+          oauth2: DEBUG
+      boot:
+        autoconfigure: INFO
+
+yyok:
+  # 版本
+  version: 1.0.0
+  # 快鸟物流查询配置
+  express:
+    enable: true
+    appId: 1607734
+    appKey: 81f43a2e-f504-45c4-9b54-2637d59f8190
+  apiUrl: http://127.0.0.1:8009/api
+
+mybatis-plus:
+  check-config-location: true
+  configuration:
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      id-type: auto
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+      mapper-locations: classpath*:mapper/**/*Mapper.xml
+
+# PageHelper分页插件
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+#Spring Boot Admin Client
+
+# 是否限制单用户登录
+single:
+  login: true
+
+#jwt
+jwt:
+  header: Authorization
+  # 令牌前缀
+  token-start-with: Bearer
+  secret: k09BQnaF
+  # 必须使用最少88位的Base64对该令牌进行编码
+  base64-secret: ZmQ0ZGI5NjQ0MDQwY2I4MjMxY2Y3ZmI3MjdhN2ZmMjNhODViOTg1ZGE0NTBjMGM4NDA5NzYxMjdjOWMwYWRmZTBlZjlhNGY3ZTg4Y2U3YTE1ODVkZDU5Y2Y3OGYwZWE1NzUzNWQ2YjFjZDc0NGMxZWU2MmQ3MjY1NzJmNTE0MzI=
+  # 令牌过期时间 此处单位/毫秒 ，默认4小时，可在此网站生成 https://www.convertworld.com/zh-hans/time/milliseconds.html
+  token-validity-in-seconds: 14400000
+  # 在线用户key
+  online-key: online-token
+  # 验证码
+  code-key: code-key
+
+# 添加自定义OSS参数
+oss:
+  server:
+    endpoint: https://oss-cn.yyok.com
+    access:
+      key:
+        id: LTAI4G52sGc3zraTbCWqnSPB
+        secret: x3BrPYSnsUnE7zwsrMWDiqTyWqZT3h
+    bucket:
+      name: sl-lagou
+    url:
+      prefix: https://oss.yyok.com/
+    # MB
+    file-size: 5
+
+pki:
+  client:
+    #设置是否双向验证，默认为false，设置为true代表双向验证
+    auth:  false
+  key:
+    store:
+      #服务器证书文件路径
+      file:  /file/
+      #服务器证书密码
+      pass:  root
+  trust:
+    store:
+      #用来验证客户端证书的根证书，此例中就是服务器证书
+      file:  root
+      #根证书密码
+      pass:  root
+# sso
+cas:
+  #对服务端进行配置
+  server:
+    #cas server的主路径，这里指向我们的cas服务端
+    prefix: https://cas.yyg.cn:8443/cas
+    #指向cas服务端的登录页面
+    login: ${cas.server.prefix}/login
+    #指向cas服务端的退出登录页面
+    logout: ${cas.server.prefix}/logout
+  #对客户端进行配置
+  client:
+    #配置cas客户端url前缀
+    prefix: http://client.cas.yyg.cn:8080
+    #配置客户端登录地址
+    login: ${cas.client.prefix}/login/cas
+    #以相对路径的形式配置退出登录接口
+    relative: /logout/cas
+    #以绝对路径的形式配置退出登录接口
+    logout: ${cas.client.prefix}${cas.client.relative}
+  account:
+    #配置登录到cas服务端的用户名
+    inmemory: yyok

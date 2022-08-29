@@ -1,0 +1,31 @@
+server:
+  port: 9002
+
+spring:
+  application:
+    name: yyok-assembly-client
+  boot:
+    admin:
+      client:
+        instance:
+          # 使用ip注册进来
+          prefer-ip: true
+        # admin-server地址
+        url: http://127.0.0.1:9000
+        # admin-server security用户名
+        username: yyok
+        # admin-server security密码
+        password: yyok
+
+# 开放健康检查接口
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+
+

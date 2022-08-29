@@ -1,0 +1,192 @@
+#配置数据源
+spring:
+  application:
+    name: yyok-admin
+  #单点配置
+  #spring.redis.host=192.168.1.1
+  #spring.redis.port=6379
+  #哨兵配置
+  #spring.redis.sentinel.master=common
+  #spring.redis.sentinel.nodes=192.168.1.84:26379,192.168.1.85:26379
+  #spring.redis.password=123456
+  #集群配置
+  #spring.redis.cluster.nodes=192.168.1.24:6389,192.168.1.24:6479,192.168.1.24:6579
+  #spring.redis.password=123456
+  redis:
+    # 1: 单点redis 2:哨兵redis 3: 集群redis
+    clusterType: 1
+    #数据库索引
+    database: 13
+    # cluster:
+    #   nodes: 192.168.0.3:6389,192.168.0.3:6388,192.168.0.3:6387
+    #host: 10.10.3.188
+    #port: 6379
+    #host: 10.13.4.67
+    #host: 127.0.0.1
+    #host: 192.168.0.3
+    # 地址
+    host: 192.168.10.34
+    # 端口，默认为6379
+    port: 6379
+    password:
+    protected-mode: no
+    #连接超时时间
+    timeout: 5000000
+    jedis: #使用 jedis 连接池
+      pool:
+        max-active: 5000000
+        max-wait: 5000000
+        max-idle: 5000000
+        min-idle: 500
+    lettuce:              #使用 lettuce 连接池
+      pool:
+        max-active: -1   #连接池最大连接数（使用负值表示没有限制）
+        max-wait: -1      #连接池最大阻塞等待时间（使用负值表示没有限制）
+        min-idle: 0       #连接池中的最大空闲连接
+        max-idle: 10      #连接池中的最小空闲连接
+    session:
+      store-type: redis
+      timeout: PT5000000M
+      flush-mode: on_save #immediate
+
+  datasource:
+    group: master,slave,test
+    default: master
+    type: com.zaxxer.hikari.HikariDataSource
+    dynamic:
+      hikari:
+        #hikari数据源特性配置
+        max-pool-size: 50000
+        min-idle: 200
+        pool-name: YYOK-DATASOURCE
+        auto-commit: true
+
+        maximum-pool-size: 50000 #最大连接数,默认值10.
+        minimum-idle: 200 #最小空闲连接，默认值10.
+        connection-timeout: 60000 #连接超时时间(毫秒),默认值30秒.
+        #空闲连接超时时间，默认值600000(10分钟),只有空闲连接数大于最大连接数且空闲时间超过该值，才会被释放
+        #如果大于等于 max-lifetime 且 max-lifetime>0,则会被重置为0.
+        idle-timeout: 600000
+        max-lifetime: 3000000 #连接最大存活时间,默认值30分钟.设置应该比mysql设置的超时时间短
+        connection-test-query: select 1 #连接测试查询
+      # 配置默认数据源
+      primary: master
+      strict: false
+      datasource:
+        master:
+          type: com.zaxxer.hikari.HikariDataSource
+          url: jdbc:mysql://192.168.10.36:3306/yyok_admin?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useSSL=false&zeroDateTimeBehavior=convertToNull
+          username: root
+          password: root
+          driver-class-name: com.mysql.cj.jdbc.Driver
+        slave:
+          driverClassName: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://192.168.10.39:3306/yyok_admin?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useSSL=false&zeroDateTimeBehavior=convertToNull&allowPublicKeyRetrieval=true
+          username: root
+          password: root
+          driver-class-name: com.mysql.cj.jdbc.Driver
+        test:
+          driverClassName: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://192.168.10.36:3306/szzd_test?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useSSL=false&zeroDateTimeBehavior=convertToNull&allowPublicKeyRetrieval=true
+          username: root
+          password: root
+          driver-class-name: com.mysql.cj.jdbc.Driver
+  kafka:
+    bootstrap-servers: 192.168.10.36:9092,192.168.10.38:9092,192.168.10.39:9092
+    #47.96.84.144:10006,118.31.52.193:10006,121.41.30.35:10006 # kafka集群信息
+    producer: # 生产者配置
+      servers: 192.168.10.36:9092,192.168.10.38:9092,192.168.10.39:9092
+      retries: 3 # 设置大于0的值，则客户端会将发送失败的记录重新发送
+      batch:
+        size: 16384 #16K
+      linger: 6
+      buffer:
+        memory: 33554432 #32M
+      acks: all
+      # 提交延时
+      properties:
+          linger:
+            ms: 0
+      # 指定消息key和消息体的编解码方式
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      servers: 192.168.10.36:9092,192.168.10.38:9092,192.168.10.39:9092
+      group:
+         id: szzd # 消费者组
+      enable:
+        auto:
+          commit: true # 关闭自动提交
+      session:
+        timeout: 120000
+        auto: true
+        offset:
+          reset: earliest # 当各分区下有已提交的offset时，从提交的offset开始消费；无提交的offset时，从头开始消费
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      # 批量消费每次最多消费多少条消息
+      max-poll-records: 50
+      # 提交offset延时(接收到消息后多久提交offset)
+      auto:
+        commit:
+          interval: 1000
+        offset:
+          reset: earliest
+      # 消费会话超时时间(超过这个时间consumer没有发送心跳,就会触发rebalance操作)
+      properties:
+        session:
+          timeout:
+            ms: 120000
+        # 消费请求超时时间
+        request:
+          timeout:
+            ms: 180000
+      concurrency: 3
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+    listener:
+      # 当每一条记录被消费者监听器（ListenerConsumer）处理之后提交
+      # RECORD
+      # 当每一批poll()的数据被消费者监听器（ListenerConsumer）处理之后提交
+      # BATCH
+      # 当每一批poll()的数据被消费者监听器（ListenerConsumer）处理之后，距离上次提交时间大于TIME时提交
+      # TIME
+      # 当每一批poll()的数据被消费者监听器（ListenerConsumer）处理之后，被处理record数量大于等于COUNT时提交
+      # COUNT
+      # TIME |　COUNT　有一个条件满足时提交
+      # COUNT_TIME
+      # 当每一批poll()的数据被消费者监听器（ListenerConsumer）处理之后, 手动调用Acknowledgment.acknowledge()后提交
+      # MANUAL
+      # 手动调用Acknowledgment.acknowledge()后立即提交，一般使用这种
+      # MANUAL_IMMEDIATE
+      #ack-mode: MANUAL
+      missing-topics-fatal: false
+      #      concurrency: 3
+      type: batch
+    topics:
+      logs: logs
+      bux: bux
+      home: home
+      rish: risk
+      portal: portal
+      cd: cd
+      meta: metadata
+      micr: micr
+      sys: sys
+      tmp: tmp
+
+# 文件存储路径
+#  1.localUrl为空的话上传文件会走七牛云，请转向文档看七牛云配置
+#  2.如果想文件存在本地，并通过本地代理出去请填写localUrl： http://127.0.0.1:8000为本服务的ip+端口号
+#     线上的地址就是你通过nginx代理http://127.0.0.1:8000出来的地址。鉴于群里很多问的这里做个说明不在赘述
+file:
+  path: D:\yyok\file\
+  avatar: D:\yyok\avatar\
+  # 文件大小 /M
+  maxSize: 100
+  avatarMaxSize: 5
+  localUrl: http://127.0.0.1:8000
+
+
+
