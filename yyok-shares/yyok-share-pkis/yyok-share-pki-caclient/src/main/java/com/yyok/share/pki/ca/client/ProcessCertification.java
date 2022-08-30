@@ -35,30 +35,21 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public class ProcessCertification {
-
     final Logger logger = LoggerFactory.getLogger(ProcessCertification.class);
-
     private PKIKeyStore pkiKeyStore;
-
     private Profiles certificationProfiles;
-
     public PKIKeyStore getPkiKeyStore() {
         return pkiKeyStore;
     }
-
     public void setPkiKeyStore(PKIKeyStore pkiKeyStore) {
         this.pkiKeyStore = pkiKeyStore;
     }
-
     public Profiles getCertificationProfiles() {
         return certificationProfiles;
     }
-
     public void setCertificationProfiles(Profiles certificationProfiles) {
         this.certificationProfiles = certificationProfiles;
     }
-
-    
     public ProcessCertification(PKIKeyStore pkiKeyStore,
 			Profiles certificationProfiles) {
 		super();

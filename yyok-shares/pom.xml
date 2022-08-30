@@ -26,9 +26,10 @@
         <module>yyok-share-admin</module>
         <module>yyok-share-kafka</module>
         <module>yyok-share-redission</module>
-   <!--     <module>yyok-share-security</module> -->
-        <!--  <module>yyok-share-pkis</module>-->
+        <module>yyok-share-security</module>
+        <module>yyok-share-pkis</module>
         <module>yyok-share-boot</module>
+        <module>yyok-share-nlps</module>
     </modules>
 
 </project>

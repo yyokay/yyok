@@ -21,7 +21,7 @@ public class SMHutoolUtil {
     public static void main(String[] args) {
         System.out.println("======== 国密:SM2-4使用密钥对加密或解密，开始 ========");
         String pwd ="123456";
-        test1();
+        test1("123456");
         test2();
         test3();
         test4();
@@ -32,14 +32,14 @@ public class SMHutoolUtil {
         sm4(pwd);
     }
 
-    public static void test1() {
+    public static void test1(String pwd) {
 
        // System.out.println("======== SM2使用随机生成的密钥对加密或解密，开始 ========");
 
         String text = "SM2使用随机生成的密钥对加密或解密";
         SM2 sm2 = SmUtil.sm2();
         // 公钥加密，私钥解密
-        String encryptStr = sm2.encryptBcd(text, KeyType.PublicKey);
+        String encryptStr = sm2.encryptBcd(pwd, KeyType.PublicKey);
         System.out.println("密文：" + encryptStr);
         String decryptStr = StrUtil.utf8Str(sm2.decryptFromBcd(encryptStr, KeyType.PrivateKey));
         System.out.println("明文：" + decryptStr);
@@ -128,8 +128,6 @@ public class SMHutoolUtil {
     }
 
     public static void sm2(String pwd) {
-
-        //String text = "123456";
 
         //使用随机生成的密钥对加密或解密
         System.out.println("使用随机生成的密钥对加密或解密====开始");

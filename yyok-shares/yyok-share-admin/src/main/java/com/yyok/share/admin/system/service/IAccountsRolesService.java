@@ -16,4 +16,5 @@ public interface IAccountsRolesService extends IBaseService<AccountRole> {
     public boolean grantAuthorization(List<AccountRoleVo> accountsRoles);
 
     HashMap verification(HashMap hs);
+
 }
