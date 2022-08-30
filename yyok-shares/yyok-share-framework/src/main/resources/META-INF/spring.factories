@@ -1,0 +1,6 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+    com.yyok.share.framework.dozer.config.DozerMapperConfig,\
+    com.yyok.share.framework.mapper.config.MetaHandler,\
+    com.yyok.share.framework.mapper.config.MybatisConfig,\
+    com.yyok.share.framework.exception.handler.GlobalExceptionHandler,\
+    com.yyok.share.framework.utils.SpringContextHolder

@@ -1,0 +1,22 @@
+cas:
+  #对服务端进行配置
+  server:
+    #cas server的主路径，这里指向我们的cas服务端
+    prefix: https://cas.yyok.com:8443/cas
+    #指向cas服务端的登录页面
+    login: ${cas.server.prefix}/login
+    #指向cas服务端的退出登录页面
+    logout: ${cas.server.prefix}/logout
+  #对客户端进行配置
+  client:
+    #配置cas客户端url前缀
+    prefix: http://cas.yyok.com:8080
+    #配置客户端登录地址
+    login: ${cas.client.prefix}/login/cas
+    #以相对路径的形式配置退出登录接口
+    relative: /logout/cas
+    #以绝对路径的形式配置退出登录接口
+    logout: ${cas.client.prefix}${cas.client.relative}
+  user: yyok
+  #配置登录到cas服务端的用户名
+
