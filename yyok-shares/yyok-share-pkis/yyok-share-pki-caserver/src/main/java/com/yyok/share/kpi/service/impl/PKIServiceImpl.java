@@ -5,21 +5,28 @@ import com.yyok.share.kpi.domain.CAIdentityContainer;
 import com.yyok.share.kpi.domain.CertificateAuthority;
 import com.yyok.share.kpi.domain.IdentityContainer;
 import com.yyok.share.kpi.domain.PKI;
+import com.yyok.share.kpi.service.IPKIService;
 import com.yyok.share.kpi.service.mapper.ICAIdentityContainerMapper;
 import com.yyok.share.kpi.service.mapper.ICertificateAuthorityMapper;
 import com.yyok.share.kpi.service.mapper.IPKIReMapper;
+import lombok.AllArgsConstructor;
 import org.bouncycastle.cert.X509CertificateHolder;
 import org.bouncycastle.cms.CMSSignedData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.security.KeyPair;
 import java.security.PrivateKey;
 import java.util.List;
 
-//@Service
-public class PKIServiceImpl {
+@Service
+@AllArgsConstructor
+//@CacheConfig(cacheNames = "userAvatar")
+@Transactional(propagation = Propagation.SUPPORTS, readOnly = true, rollbackFor = Exception.class)
+public class PKIServiceImpl implements IPKIService {
 
 	//@Autowired
 	private CertificateServiceImpl certificateServiceImpl;
@@ -42,6 +49,7 @@ public class PKIServiceImpl {
 
 	private static final String ROOT_CA = "ROOTCA";
 
+	@Override
 	public PKI generatePKI(String pkiName) {
 		KeyPair keyPair = certificateKeyPairGeneratorServiceImpl.generateKeyPair();
 
@@ -61,12 +69,14 @@ public class PKIServiceImpl {
 		return pki;
 	}
 
+	@Override
 	public List<PKI> listPKIs() {
 		QueryWrapper qw = new QueryWrapper();
 		qw.setEntityClass(PKI.class);
 	return pKIReMapper.selectList(qw);
 	}
 
+	@Override
 	public IdentityContainer generateIdentity(String pkiName, String subjectName) {
 		PKI retrievedPKI = pKIReMapper.findOneByName(pkiName);
 
@@ -86,6 +96,7 @@ public class PKIServiceImpl {
 		return identifyContainer;
 	}
 
+	@Override
 	public CMSSignedData getCertificateChain(String subjectName) {
 		try {
 			CertificateAuthority ca = this.certificateAuthorityMapper.findOneByName(subjectName + ROOT_CA);

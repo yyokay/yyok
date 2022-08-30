@@ -1,13 +1,18 @@
 package com.yyok.share.kpi.service.impl;
 
 import com.yyok.share.kpi.domain.CertificateAuthority;
+import com.yyok.share.kpi.service.ICRLService;
 import com.yyok.share.kpi.service.mapper.ICertificateAuthorityMapper;
+import lombok.AllArgsConstructor;
 import org.bouncycastle.asn1.x509.CRLNumber;
 import org.bouncycastle.asn1.x509.Extension;
 import org.bouncycastle.cert.jcajce.JcaX509CertificateConverter;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import org.bouncycastle.x509.X509V2CRLGenerator;
 import org.bouncycastle.x509.extension.AuthorityKeyIdentifierStructure;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.security.auth.x500.X500Principal;
 import java.math.BigInteger;
@@ -15,11 +20,15 @@ import java.security.cert.X509CRL;
 import java.security.cert.X509Certificate;
 import java.util.Date;
 
-
-public class CRLServiceImpl implements com.yyok.share.kpi.service.ICRLService {
+@Service
+@AllArgsConstructor
+//@CacheConfig(cacheNames = "userAvatar")
+@Transactional(propagation = Propagation.SUPPORTS, readOnly = true, rollbackFor = Exception.class)
+public class CRLServiceImpl implements ICRLService {
 
 	private ICertificateAuthorityMapper caRepository;
 	
+	@Override
 	@SuppressWarnings("deprecation")
 	public X509CRL generateCRL(String caName) {
 		try {		

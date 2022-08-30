@@ -4,6 +4,7 @@ import com.yyok.share.framework.mapper.common.service.impl.BaseServiceImpl;
 import com.yyok.share.kpi.domain.CAIdentityContainer;
 import com.yyok.share.kpi.service.ICertificateService;
 import com.yyok.share.kpi.service.mapper.ICAIdentityContainerMapper;
+import lombok.AllArgsConstructor;
 import org.bouncycastle.asn1.ASN1EncodableVector;
 import org.bouncycastle.asn1.ASN1Sequence;
 import org.bouncycastle.asn1.DERIA5String;
@@ -20,6 +21,9 @@ import org.bouncycastle.crypto.util.PrivateKeyFactory;
 import org.bouncycastle.operator.*;
 import org.bouncycastle.operator.bc.BcDigestCalculatorProvider;
 import org.bouncycastle.operator.bc.BcRSAContentSignerBuilder;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.io.IOException;
 import java.math.BigInteger;
@@ -28,10 +32,10 @@ import java.security.PrivateKey;
 import java.security.PublicKey;
 import java.util.Date;
 
-//@Service
-//@AllArgsConstructor
+@Service
+@AllArgsConstructor
 //@CacheConfig(cacheNames = "userAvatar")
-//@Transactional(propagation = Propagation.SUPPORTS, readOnly = true, rollbackFor = Exception.class)
+@Transactional(propagation = Propagation.SUPPORTS, readOnly = true, rollbackFor = Exception.class)
 public class CertificateServiceImpl extends BaseServiceImpl<ICAIdentityContainerMapper, CAIdentityContainer> implements ICertificateService {
 
 	private static final String SIG_HASH_ALG = "SHA256withRSA";

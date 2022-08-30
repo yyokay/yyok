@@ -3,14 +3,7 @@ package com.yyok.share.kpi.utils;
 import org.bouncycastle.cert.X509CertificateHolder;
 
 import java.security.cert.X509CRL;
-
-/**
- * 
- * @author fabio.resner
- *
- */
 public class GeneralUtils {
-	
 	public static final String CN = "CN=";
 	public static final String EMPTY_STRING = "";
 	public static final String COMMA = ",";

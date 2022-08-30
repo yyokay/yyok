@@ -14,10 +14,10 @@ import java.security.KeyPair;
 import java.security.KeyPairGenerator;
 import java.security.SecureRandom;
 
-//@Service
-//@AllArgsConstructor
+@Service
+@AllArgsConstructor
 //@CacheConfig(cacheNames = "userAvatar")
-//@Transactional(propagation = Propagation.SUPPORTS, readOnly = true, rollbackFor = Exception.class)
+@Transactional(propagation = Propagation.SUPPORTS, readOnly = true, rollbackFor = Exception.class)
 public class CertificateKeyPairGeneratorServiceImpl extends BaseServiceImpl<ICAIdentityContainerMapper, CAIdentityContainer> implements ICertificateKeyPairGeneratorService {
 
 	private static final String KEYS_ALGORITHM = "RSA";

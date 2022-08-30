@@ -9,10 +9,7 @@ import java.util.List;
 public class PKI{
 
 	private static final long serialVersionUID = -140537791349423216L;
-
-
-	private List<CertificateAuthority> cas; 
-	
+	private List<CertificateAuthority> cas;
 	@JsonView(PKISummary.class)
 	private String name;
 	

@@ -12,6 +12,7 @@
     <groupId>com.yyok.share.lnp</groupId>
     <artifactId>yyok-share-nlps</artifactId>
     <version>1.0.0</version>
+
     <modules>
         <module>yyok-share-nlp-text</module>
     </modules>
@@ -39,8 +40,23 @@
 
     </dependencies>
 
-
     <build>
+        <plugins>
+<!--            <plugin>
+                <groupId>net.alchim31.maven</groupId>
+                <artifactId>scala-maven-plugin</artifactId>
+                <version>3.1.4</version>
+            </plugin>-->
+            <plugin>
+                <groupId>org.scala-tools</groupId>
+                <artifactId>maven-scala-plugin</artifactId>
+                <version>2.15.2</version>
+            </plugin>
+        </plugins>
+    </build>
+
+
+ <!--   <build>
         <sourceDirectory>src/main/scala</sourceDirectory>
         <testSourceDirectory>src/test/scala</testSourceDirectory>
         <plugins>
@@ -92,5 +108,5 @@
                 </configuration>
             </plugin>
         </plugins>
-    </reporting>
+    </reporting>-->
 </project>
