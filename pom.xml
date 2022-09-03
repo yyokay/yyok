@@ -29,8 +29,7 @@
 
     <springframework.version>5.3.22</springframework.version>
     <spring-boot.version>2.7.3</spring-boot.version>
-    <spring-cloud.version>Hoxton.SR9</spring-cloud.version>
-    <spring-cloud-sub.version>2.2.6.RELEASE</spring-cloud-sub.version>
+    <spring-cloud.version>Hoxton.SR11</spring-cloud.version>
     <spring-security.version>5.7.2</spring-security.version>
     <spring-boot-admin.version>2.7.3</spring-boot-admin.version>
     <springframework.social.version>1.1.6.RELEASE</springframework.social.version>
@@ -76,7 +75,7 @@
     <javax.version>1</javax.version>
     <whvcse.version>1.6.2</whvcse.version>
     <bitwalker.version>1.21</bitwalker.version>
-    <!--<jedis.version>3.3.0</jedis.version>-->
+    <jedis.version>3.3.0</jedis.version>
     <validator.version>6.1.7.Final</validator.version>
     <jjwt.version>0.10.6</jjwt.version>
 
@@ -104,11 +103,11 @@
       <artifactId>commons-lang3</artifactId>
     </dependency>
 
-    <dependency>
+<!--    <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
       <version>4.0.1</version>
-    </dependency>
+    </dependency>-->
 
     <dependency>
       <groupId>commons-lang</groupId>

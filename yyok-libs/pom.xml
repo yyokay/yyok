@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>yyok-lib-mls</module>
+        <module>yyok-lib-linuxs</module>
     </modules>
     <groupId>com.yyok.lib</groupId>
     <artifactId>yyok-libs</artifactId>
@@ -22,5 +23,12 @@
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.yyok.share.framework</groupId>
+            <artifactId>yyok-share-framework</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
     
 </project>

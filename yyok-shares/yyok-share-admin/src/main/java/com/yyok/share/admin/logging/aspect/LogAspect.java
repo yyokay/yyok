@@ -61,7 +61,7 @@ public class LogAspect {
         String accountName = SecurityUtils.getAccountName();
         String accountIp = StringUtils.getIp(RequestHolder.getHttpServletRequest());
         String accountCode = SecurityUtils.getAccountCode();
-        String msg = "[INFO],[" + accountIp + "],[" + System.currentTimeMillis() + "],[" + accountCode + "],[" + accountName + "], " + joinPoint;
+        String msg = "[INFO-Around],[" + accountIp + "],[" + System.currentTimeMillis() + "],[" + accountCode + "],[" + accountName + "], " + joinPoint;
         kafkaTemplate.send("logs", msg);
         logService.save(accountName, accountIp, joinPoint, log, accountCode);
         return result;
@@ -83,7 +83,7 @@ public class LogAspect {
         String accountName = SecurityUtils.getAccountName();
         String accountIp = StringUtils.getIp(RequestHolder.getHttpServletRequest());
         String accountCode = SecurityUtils.getAccountCode();
-        String msg = "[ERROR],[" + accountIp + "],[" + System.currentTimeMillis() + "],[" + accountCode + "],[" + accountName + "], " + joinPoint;
+        String msg = "[ERROR-AfterThrowing],[" + accountIp + "],[" + System.currentTimeMillis() + "],[" + accountCode + "],[" + accountName + "], " + joinPoint;
         kafkaTemplate.send("logs", msg);
         logService.save(accountName, accountIp,
                 (ProceedingJoinPoint) joinPoint, log, accountCode);

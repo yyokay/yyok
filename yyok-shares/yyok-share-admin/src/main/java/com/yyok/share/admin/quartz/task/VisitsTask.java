@@ -17,6 +17,6 @@ public class VisitsTask {
     }
 
     public void run() {
-        visitsService.save();
+        visitsService.save("");
     }
 }

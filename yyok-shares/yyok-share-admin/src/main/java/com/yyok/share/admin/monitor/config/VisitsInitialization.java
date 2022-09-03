@@ -21,7 +21,7 @@ public class VisitsInitialization implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) {
-        visitsService.save();
+        visitsService.save("");
         System.out.println("初始化站点统计");
     }
 }

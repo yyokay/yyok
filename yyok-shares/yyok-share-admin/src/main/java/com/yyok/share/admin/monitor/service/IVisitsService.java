@@ -15,7 +15,7 @@ public interface IVisitsService extends IBaseService<Visits> {
     /**
      * 提供给定时任务，每天0点执行
      */
-    void save();
+    void save(String role);
 
     /**
      * 新增记录

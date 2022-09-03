@@ -19,7 +19,7 @@
     <property name="CONSOLE_LOG_PATTERN"
               value="%yellow(%date{yyyy-MM-dd HH:mm:ss}) |%highlight(%-5level) |%blue(%thread) |%blue(%file:%line) |%green(%logger) |%cyan(%msg%n)"/>
 
-    <property name="kafka_bootstrap_servers" value="47.96.84.144:10006,118.31.52.193:10006,121.41.30.35:10006"/>
+    <property name="kafka_bootstrap_servers" value="192.168.10.36:9092,192.168.10.38:9092,192.168.10.39:9092"/>
     <property name="kafka_retries" value="3"/>
     <property name="kafka_linger_ms" value="1000"/> <!-- 如果你想减少请求的数量，你可以将linger.ms设置为大于某个值的东西 -->
     <property name="kafka_batch_size" value="2048"/>	<!-- 缓冲区大小 -->
@@ -138,7 +138,7 @@
     <!--开发环境:打印控制台-->
     <springProfile name="dev">
         <!--可以输出项目中的debug日志，包括mybatis的sql日志-->
-        <logger name="com.guli" level="INFO" />
+        <logger name="com.yyok" level="INFO" />
 
         <!--
             root节点是必选节点，用来指定最基础的日志输出级别，只有一个level属性

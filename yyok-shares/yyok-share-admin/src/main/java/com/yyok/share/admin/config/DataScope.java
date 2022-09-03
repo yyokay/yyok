@@ -7,6 +7,7 @@ import com.yyok.share.admin.system.service.IAccountService;
 import com.yyok.share.admin.system.service.IRoleService;
 import com.yyok.share.admin.system.service.dto.RoleSmallDto;
 import com.yyok.share.framework.utils.SecurityUtils;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -21,21 +22,15 @@ import java.util.Set;
  * @date 2022-05-1
  */
 @Component
+@AllArgsConstructor
 public class DataScope {
 
     private final String[] scopeType = {"全部", "本级", "自定义"};
-
     private final IAccountService accountService;
 
     private final IRoleService roleService;
 
     private final IDeptService deptService;
-
-    public DataScope(IAccountService accountService, IRoleService roleService, IDeptService deptService) {
-        this.accountService = accountService;
-        this.roleService = roleService;
-        this.deptService = deptService;
-    }
 
     public Set<String> getDeptCodes() {
 

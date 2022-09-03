@@ -50,7 +50,7 @@ spring:
       flush-mode: on_save #immediate
 
   datasource:
-    group: master,slave,test
+    group: master,slave,test,clickhouse
     default: master
     type: com.zaxxer.hikari.HikariDataSource
     dynamic:
@@ -91,11 +91,21 @@ spring:
           username: root
           password: root
           driver-class-name: com.mysql.cj.jdbc.Driver
+        clickhouse:
+          driverClassName: ru.yandex.clickhouse.ClickHouseDriver
+          # com.clickhouse.jdbc.ClickHouseDriver
+          url: jdbc:clickhouse://192.168.10.34:8123/szzd # ip:port/database
+          userName: default
+          password: root # 按照自己连接的 clickhouse 数据库来
+          initialSize: 10
+          maxActive: 100
+          minIdle: 10
+          maxWait: 6000
+          validationQuery: SELECT 1
   kafka:
     bootstrap-servers: 192.168.10.36:9092,192.168.10.38:9092,192.168.10.39:9092
     #47.96.84.144:10006,118.31.52.193:10006,121.41.30.35:10006 # kafka集群信息
     producer: # 生产者配置
-      servers: 192.168.10.36:9092,192.168.10.38:9092,192.168.10.39:9092
       retries: 3 # 设置大于0的值，则客户端会将发送失败的记录重新发送
       batch:
         size: 16384 #16K
@@ -111,7 +121,6 @@ spring:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
     consumer:
-      servers: 192.168.10.36:9092,192.168.10.38:9092,192.168.10.39:9092
       group:
          id: szzd # 消费者组
       enable:

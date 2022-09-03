@@ -3,6 +3,7 @@ package com.yyok.share.admin.logging.service.impl;
 import cn.hutool.core.lang.Dict;
 import cn.hutool.core.util.ObjectUtil;
 import cn.hutool.json.JSONObject;
+import com.baomidou.dynamic.datasource.annotation.DS;
 import com.github.pagehelper.PageInfo;
 import com.yyok.share.admin.logging.domain.Log;
 import com.yyok.share.admin.logging.service.ILogService;
@@ -36,6 +37,7 @@ import java.util.*;
  * @date 2022-05-24
  */
 @Service
+@DS("clickhouse")
 @Transactional(propagation = Propagation.SUPPORTS, readOnly = true, rollbackFor = Exception.class)
 public class LogServiceImpl extends BaseServiceImpl<ILogMapper, Log> implements ILogService {
 
