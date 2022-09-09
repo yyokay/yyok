@@ -30,6 +30,7 @@
         <module>yyok-share-pkis</module>
         <module>yyok-share-boot</module>
         <module>yyok-share-nlps</module>
+        <module>yyok-share-flowables</module>
     </modules>
 
 </project>

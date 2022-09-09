@@ -14,6 +14,8 @@
     <modules>
         <module>yyok-lib-mls</module>
         <module>yyok-lib-linuxs</module>
+        <module>yyok-lib-acquisite</module>
+        <module>yyok-lib-docs</module>
     </modules>
     <groupId>com.yyok.lib</groupId>
     <artifactId>yyok-libs</artifactId>

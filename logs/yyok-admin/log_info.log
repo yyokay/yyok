@@ -1,35 +1,42 @@
-2022-08-30 11:29:49.716 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.4.Final
-2022-08-30 11:29:49.765 [main] INFO  com.yyok.YYOKApplicationBootstrap - Starting YYOKApplicationBootstrap using Java 1.8.0_221 on yyok with PID 74089 (/ddhome/local/workspace/yyok/yyok-assemblies/yyok-assembly-boot/target/classes started by root in /ddhome/local/workspace/yyok)
-2022-08-30 11:29:49.766 [main] INFO  com.yyok.YYOKApplicationBootstrap - The following 1 profile is active: "dev"
-2022-08-30 11:29:51.355 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-08-30 11:29:51.362 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$5a60403e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-08-30 11:29:51.379 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dsProcessor' of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-08-30 11:29:51.657 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8000 (http)
-2022-08-30 11:29:51.663 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8000"]
-2022-08-30 11:29:51.663 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2022-08-30 11:29:51.663 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
-2022-08-30 11:29:51.753 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2022-08-30 11:29:51.753 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1930 ms
-2022-08-30 11:29:51.947 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Starting...
-2022-08-30 11:29:52.127 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Start completed.
-2022-08-30 11:29:52.131 [main] INFO  com.zaxxer.hikari.HikariDataSource - slave - Starting...
-2022-08-30 11:29:52.142 [main] INFO  com.zaxxer.hikari.HikariDataSource - slave - Start completed.
-2022-08-30 11:29:52.145 [main] INFO  com.zaxxer.hikari.HikariDataSource - test - Starting...
-2022-08-30 11:29:52.149 [main] INFO  com.zaxxer.hikari.HikariDataSource - test - Start completed.
-2022-08-30 11:29:52.149 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [slave] success
-2022-08-30 11:29:52.149 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [test] success
-2022-08-30 11:29:52.149 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [master] success
-2022-08-30 11:29:52.150 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource initial loaded [3] datasource,primary datasource named [master]
-2022-08-30 11:29:52.507 [main] INFO  org.dozer.config.GlobalSettings - Trying to find Dozer configuration file: dozer.properties
-2022-08-30 11:29:52.515 [main] INFO  org.dozer.DozerInitializer - Initializing Dozer. Version: 5.5.0, Thread Name: main
-2022-08-30 11:29:52.517 [main] INFO  org.dozer.jmx.JMXPlatformImpl - Dozer JMX MBean [org.dozer.jmx:type=DozerStatisticsController] auto registered with the Platform MBean Server
-2022-08-30 11:29:52.517 [main] INFO  org.dozer.jmx.JMXPlatformImpl - Dozer JMX MBean [org.dozer.jmx:type=DozerAdminController] auto registered with the Platform MBean Server
-2022-08-30 11:29:52.518 [main] INFO  org.dozer.DozerBeanMapper - Initializing a new instance of dozer bean mapper.
-2022-08-30 11:29:53.749 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
-2022-08-30 11:29:53.758 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2022-08-30 11:29:53.758 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
-2022-08-30 11:29:53.759 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
-2022-08-30 11:29:53.760 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+2022-09-08 19:00:15.191 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.4.Final
+2022-09-08 19:00:15.216 [main] INFO  com.yyok.YYOKApplicationBootstrap - Starting YYOKApplicationBootstrap using Java 1.8.0_221 on yyok with PID 70411 (/ddhome/local/workspace/yyok/yyok-assemblies/yyok-assembly-boot/target/classes started by root in /ddhome/local/workspace/yyok)
+2022-09-08 19:00:15.217 [main] INFO  com.yyok.YYOKApplicationBootstrap - The following 1 profile is active: "dev"
+2022-09-08 19:00:16.787 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-08 19:00:16.794 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$7bd39516] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-08 19:00:16.811 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dsProcessor' of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-08 19:00:16.861 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfig' of type [com.yyok.share.framework.config.RedisConfig$$EnhancerBySpringCGLIB$$dd20797f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-08 19:00:16.866 [main] INFO  com.yyok.share.framework.config.RedisConfig - 初始化 -> [Redis CacheErrorHandler]
+2022-09-08 19:00:16.868 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'errorHandler' of type [com.yyok.share.framework.config.RedisConfig$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-09-08 19:00:17.112 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8000 (http)
+2022-09-08 19:00:17.117 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8000"]
+2022-09-08 19:00:17.118 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-09-08 19:00:17.118 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-08 19:00:17.212 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-09-08 19:00:17.213 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1942 ms
+2022-09-08 19:00:17.418 [main] INFO  ru.yandex.clickhouse.ClickHouseDriver - Driver registered
+2022-09-08 19:00:17.420 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Starting...
+2022-09-08 19:00:17.594 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Start completed.
+2022-09-08 19:00:17.598 [main] INFO  com.zaxxer.hikari.HikariDataSource - slave - Starting...
+2022-09-08 19:00:17.607 [main] INFO  com.zaxxer.hikari.HikariDataSource - slave - Start completed.
+2022-09-08 19:00:17.609 [main] INFO  com.zaxxer.hikari.HikariDataSource - test - Starting...
+2022-09-08 19:00:17.613 [main] INFO  com.zaxxer.hikari.HikariDataSource - test - Start completed.
+2022-09-08 19:00:17.615 [main] INFO  com.zaxxer.hikari.HikariDataSource - clickhouse - Starting...
+2022-09-08 19:00:17.756 [main] INFO  com.zaxxer.hikari.HikariDataSource - clickhouse - Start completed.
+2022-09-08 19:00:17.757 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [slave] success
+2022-09-08 19:00:17.757 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [test] success
+2022-09-08 19:00:17.757 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [clickhouse] success
+2022-09-08 19:00:17.758 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [master] success
+2022-09-08 19:00:17.758 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource initial loaded [4] datasource,primary datasource named [master]
+2022-09-08 19:00:18.272 [main] INFO  org.dozer.config.GlobalSettings - Trying to find Dozer configuration file: dozer.properties
+2022-09-08 19:00:18.280 [main] INFO  org.dozer.DozerInitializer - Initializing Dozer. Version: 5.5.0, Thread Name: main
+2022-09-08 19:00:18.282 [main] INFO  org.dozer.jmx.JMXPlatformImpl - Dozer JMX MBean [org.dozer.jmx:type=DozerStatisticsController] auto registered with the Platform MBean Server
+2022-09-08 19:00:18.282 [main] INFO  org.dozer.jmx.JMXPlatformImpl - Dozer JMX MBean [org.dozer.jmx:type=DozerAdminController] auto registered with the Platform MBean Server
+2022-09-08 19:00:18.283 [main] INFO  org.dozer.DozerBeanMapper - Initializing a new instance of dozer bean mapper.
+2022-09-08 19:00:20.221 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2022-09-08 19:00:20.229 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-09-08 19:00:20.230 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2022-09-08 19:00:20.230 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2022-09-08 19:00:20.231 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
   Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
   NOT STARTED.
   Currently in standby mode.
@@ -37,17 +44,16 @@
   Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
   Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-2022-08-30 11:29:53.760 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'QuartzScheduler' initialized from an externally provided properties instance.
-2022-08-30 11:29:53.760 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
-2022-08-30 11:29:53.760 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: com.yyok.share.admin.quartz.config.QuartzConfig$QuartzJobFactory@337fb1a5
-2022-08-30 11:29:53.761 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED started.
-2022-08-30 11:29:55.664 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3c1d6ef0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2e2c9e24, org.springframework.security.web.context.SecurityContextPersistenceFilter@630bd5e7, org.springframework.security.web.header.HeaderWriterFilter@6a8ab98f, org.springframework.security.web.authentication.logout.LogoutFilter@1512efe9, org.springframework.web.filter.CorsFilter@2da5fdc, com.yyok.share.admin.security.domain.TokenFilter@3dd27116, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@66428512, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5b6ec94a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4d3bde85, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@63218586, org.springframework.security.web.session.SessionManagementFilter@58b30e3e, org.springframework.security.web.access.ExceptionTranslationFilter@2165d4ab, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@589a4305]
-2022-08-30 11:29:55.686 [main] INFO  com.yyok.share.framework.config.RedisConfig - 初始化 -> [Redis CacheErrorHandler]
-2022-08-30 11:29:56.258 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
-2022-08-30 11:29:56.260 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2022-08-30 11:29:56.260 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
-2022-08-30 11:29:56.260 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
-2022-08-30 11:29:56.260 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+2022-09-08 19:00:20.231 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'QuartzScheduler' initialized from an externally provided properties instance.
+2022-09-08 19:00:20.231 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2022-09-08 19:00:20.232 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: com.yyok.share.admin.quartz.config.QuartzConfig$QuartzJobFactory@66576bd2
+2022-09-08 19:00:20.232 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2022-09-08 19:00:21.708 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@193d73d3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5cb4ba80, org.springframework.security.web.context.SecurityContextPersistenceFilter@1d82d35c, org.springframework.security.web.header.HeaderWriterFilter@20524816, org.springframework.security.web.authentication.logout.LogoutFilter@44b5b54, org.springframework.web.filter.CorsFilter@605eb072, com.yyok.share.admin.security.domain.TokenFilter@978475b, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7bbc11ed, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1cb7f2fe, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@78d52d4c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@507187c1, org.springframework.security.web.session.SessionManagementFilter@31d8352e, org.springframework.security.web.access.ExceptionTranslationFilter@29612ee2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@464017f5]
+2022-09-08 19:00:22.345 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2022-09-08 19:00:22.347 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-09-08 19:00:22.347 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2022-09-08 19:00:22.347 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2022-09-08 19:00:22.347 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
   Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
   NOT STARTED.
   Currently in standby mode.
@@ -55,15 +61,15 @@
   Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
   Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-2022-08-30 11:29:56.260 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-2022-08-30 11:29:56.260 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
-2022-08-30 11:29:56.260 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@49314684
-2022-08-30 11:29:56.396 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8000"]
-2022-08-30 11:29:56.410 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8000 (http) with context path ''
-2022-08-30 11:29:56.897 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
-2022-08-30 11:29:56.897 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
-2022-08-30 11:29:56.908 [main] INFO  com.yyok.YYOKApplicationBootstrap - Started YYOKApplicationBootstrap in 7.61 seconds (JVM running for 8.407)
-2022-08-30 11:29:57.240 [main] INFO  org.apache.kafka.clients.producer.ProducerConfig - ProducerConfig values: 
+2022-09-08 19:00:22.348 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-09-08 19:00:22.348 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2022-09-08 19:00:22.348 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@26401eda
+2022-09-08 19:00:22.501 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8000"]
+2022-09-08 19:00:22.520 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8000 (http) with context path ''
+2022-09-08 19:00:23.129 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2022-09-08 19:00:23.130 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-09-08 19:00:23.139 [main] INFO  com.yyok.YYOKApplicationBootstrap - Started YYOKApplicationBootstrap in 8.398 seconds (JVM running for 9.058)
+2022-09-08 19:00:23.457 [main] INFO  org.apache.kafka.clients.producer.ProducerConfig - ProducerConfig values: 
 	acks = -1
 	batch.size = 16384
 	bootstrap.servers = [192.168.10.36:9092, 192.168.10.38:9092, 192.168.10.39:9092]
@@ -149,650 +155,15 @@
 	transactional.id = null
 	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
 
-2022-08-30 11:29:57.259 [main] INFO  org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
-2022-08-30 11:29:57.287 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.1.1
-2022-08-30 11:29:57.287 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 97671528ba54a138
-2022-08-30 11:29:57.287 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1661830197285
-2022-08-30 11:29:57.539 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
-2022-08-30 11:29:57.622 [kafka-producer-network-thread | producer-1] INFO  o.a.k.c.producer.internals.TransactionManager - [Producer clientId=producer-1] ProducerId set to 4014 with epoch 0
-2022-08-30 11:29:57.649 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition logs-0 to 13 since the associated topicId changed from null to bKeEi_LBR7yj82Ppy81Tyw
-2022-08-30 11:29:57.649 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition logs-2 to 18 since the associated topicId changed from null to bKeEi_LBR7yj82Ppy81Tyw
-2022-08-30 11:29:57.650 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition logs-1 to 17 since the associated topicId changed from null to bKeEi_LBR7yj82Ppy81Tyw
-2022-08-30 11:29:57.652 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: UMzeEXmTT8-leZGbe-_Tkw
-2022-08-30 11:30:12.359 [http-nio-8000-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-08-30 11:39:27.629 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -2 disconnected.
-2022-08-30 12:03:11.404 [SpringApplicationShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2022-08-30 12:03:11.422 [SpringApplicationShutdownHook] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
-2022-08-30 12:03:11.422 [SpringApplicationShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-2022-08-30 12:03:11.422 [SpringApplicationShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2022-08-30 12:03:11.423 [SpringApplicationShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
-2022-08-30 12:03:11.437 [SpringApplicationShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED shutting down.
-2022-08-30 12:03:11.438 [SpringApplicationShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED paused.
-2022-08-30 12:03:11.439 [SpringApplicationShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED shutdown complete.
-2022-08-30 12:03:38.531 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.4.Final
-2022-08-30 12:03:38.564 [main] INFO  com.yyok.YYOKApplicationBootstrap - Starting YYOKApplicationBootstrap using Java 1.8.0_221 on yyok with PID 77757 (/ddhome/local/workspace/yyok/yyok-assemblies/yyok-assembly-boot/target/classes started by root in /ddhome/local/workspace/yyok)
-2022-08-30 12:03:38.564 [main] INFO  com.yyok.YYOKApplicationBootstrap - The following 1 profile is active: "dev"
-2022-08-30 12:03:40.054 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-08-30 12:03:40.060 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$165f9510] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-08-30 12:03:40.077 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dsProcessor' of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-08-30 12:03:40.340 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8000 (http)
-2022-08-30 12:03:40.345 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8000"]
-2022-08-30 12:03:40.345 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2022-08-30 12:03:40.346 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
-2022-08-30 12:03:40.427 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2022-08-30 12:03:40.428 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1813 ms
-2022-08-30 12:03:40.617 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Starting...
-2022-08-30 12:03:40.733 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Start completed.
-2022-08-30 12:03:40.736 [main] INFO  com.zaxxer.hikari.HikariDataSource - slave - Starting...
-2022-08-30 12:03:40.745 [main] INFO  com.zaxxer.hikari.HikariDataSource - slave - Start completed.
-2022-08-30 12:03:40.747 [main] INFO  com.zaxxer.hikari.HikariDataSource - test - Starting...
-2022-08-30 12:03:40.750 [main] INFO  com.zaxxer.hikari.HikariDataSource - test - Start completed.
-2022-08-30 12:03:40.751 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [slave] success
-2022-08-30 12:03:40.751 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [test] success
-2022-08-30 12:03:40.751 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [master] success
-2022-08-30 12:03:40.751 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource initial loaded [3] datasource,primary datasource named [master]
-2022-08-30 12:03:41.118 [main] INFO  org.dozer.config.GlobalSettings - Trying to find Dozer configuration file: dozer.properties
-2022-08-30 12:03:41.125 [main] INFO  org.dozer.DozerInitializer - Initializing Dozer. Version: 5.5.0, Thread Name: main
-2022-08-30 12:03:41.127 [main] INFO  org.dozer.jmx.JMXPlatformImpl - Dozer JMX MBean [org.dozer.jmx:type=DozerStatisticsController] auto registered with the Platform MBean Server
-2022-08-30 12:03:41.128 [main] INFO  org.dozer.jmx.JMXPlatformImpl - Dozer JMX MBean [org.dozer.jmx:type=DozerAdminController] auto registered with the Platform MBean Server
-2022-08-30 12:03:41.128 [main] INFO  org.dozer.DozerBeanMapper - Initializing a new instance of dozer bean mapper.
-2022-08-30 12:03:42.333 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
-2022-08-30 12:03:42.342 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2022-08-30 12:03:42.342 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
-2022-08-30 12:03:42.343 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
-2022-08-30 12:03:42.343 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
-  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
-  NOT STARTED.
-  Currently in standby mode.
-  Number of jobs executed: 0
-  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
-  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
-
-2022-08-30 12:03:42.344 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'QuartzScheduler' initialized from an externally provided properties instance.
-2022-08-30 12:03:42.344 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
-2022-08-30 12:03:42.344 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: com.yyok.share.admin.quartz.config.QuartzConfig$QuartzJobFactory@237d0625
-2022-08-30 12:03:42.344 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED started.
-2022-08-30 12:12:49.262 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@41736818, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@457d3f54, org.springframework.security.web.context.SecurityContextPersistenceFilter@5f3c866c, org.springframework.security.web.header.HeaderWriterFilter@63d14dbf, org.springframework.security.web.authentication.logout.LogoutFilter@981d9d2, org.springframework.web.filter.CorsFilter@2ecdf528, com.yyok.share.admin.security.domain.TokenFilter@144792d5, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@66e62e19, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7b9b6a56, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@600b3bee, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1da61a29, org.springframework.security.web.session.SessionManagementFilter@256d8f17, org.springframework.security.web.access.ExceptionTranslationFilter@2566247d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@38e88e13]
-2022-08-30 12:12:49.298 [main] INFO  com.yyok.share.framework.config.RedisConfig - 初始化 -> [Redis CacheErrorHandler]
-2022-08-30 12:12:49.876 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
-2022-08-30 12:12:49.878 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2022-08-30 12:12:49.878 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
-2022-08-30 12:12:49.878 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
-2022-08-30 12:12:49.878 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
-  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
-  NOT STARTED.
-  Currently in standby mode.
-  Number of jobs executed: 0
-  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
-  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
-
-2022-08-30 12:12:49.879 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-2022-08-30 12:12:49.879 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
-2022-08-30 12:12:49.879 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@f461c9c
-2022-08-30 12:12:50.096 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8000"]
-2022-08-30 12:12:50.110 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8000 (http) with context path ''
-2022-08-30 12:12:50.579 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
-2022-08-30 12:12:50.579 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
-2022-08-30 12:12:50.589 [main] INFO  com.yyok.YYOKApplicationBootstrap - Started YYOKApplicationBootstrap in 552.443 seconds (JVM running for 553.23)
-2022-08-30 12:56:53.111 [http-nio-8000-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-08-30 14:05:58.186 [http-nio-8000-exec-5] INFO  org.dozer.DozerBeanMapper - Using the following xml files to load custom mappings for the bean mapper instance: [file:/ddhome/local/workspace/yyok/yyok-shares/yyok-share-framework/target/classes/dozer/bean-mappings.xml, file:/ddhome/local/workspace/yyok/yyok-shares/yyok-share-framework/target/classes/dozer/global-configuration.xml]
-2022-08-30 14:05:58.187 [http-nio-8000-exec-5] INFO  org.dozer.DozerBeanMapper - Trying to find xml mapping file: file:/ddhome/local/workspace/yyok/yyok-shares/yyok-share-framework/target/classes/dozer/bean-mappings.xml
-2022-08-30 14:05:58.189 [http-nio-8000-exec-5] INFO  org.dozer.DozerBeanMapper - Using URL [file:/ddhome/local/workspace/yyok/yyok-shares/yyok-share-framework/target/classes/dozer/bean-mappings.xml] to load custom xml mappings
-2022-08-30 14:05:58.317 [http-nio-8000-exec-5] INFO  org.dozer.DozerBeanMapper - Successfully loaded custom xml mappings from URL: [file:/ddhome/local/workspace/yyok/yyok-shares/yyok-share-framework/target/classes/dozer/bean-mappings.xml]
-2022-08-30 14:05:58.318 [http-nio-8000-exec-5] INFO  org.dozer.DozerBeanMapper - Trying to find xml mapping file: file:/ddhome/local/workspace/yyok/yyok-shares/yyok-share-framework/target/classes/dozer/global-configuration.xml
-2022-08-30 14:05:58.319 [http-nio-8000-exec-5] INFO  org.dozer.DozerBeanMapper - Using URL [file:/ddhome/local/workspace/yyok/yyok-shares/yyok-share-framework/target/classes/dozer/global-configuration.xml] to load custom xml mappings
-2022-08-30 14:05:58.328 [http-nio-8000-exec-5] INFO  org.dozer.DozerBeanMapper - Successfully loaded custom xml mappings from URL: [file:/ddhome/local/workspace/yyok/yyok-shares/yyok-share-framework/target/classes/dozer/global-configuration.xml]
-2022-08-30 14:05:58.878 [http-nio-8000-exec-5] INFO  org.apache.kafka.clients.producer.ProducerConfig - ProducerConfig values: 
-	acks = -1
-	batch.size = 16384
-	bootstrap.servers = [192.168.10.36:9092, 192.168.10.38:9092, 192.168.10.39:9092]
-	buffer.memory = 33554432
-	client.dns.lookup = use_all_dns_ips
-	client.id = producer-1
-	compression.type = none
-	connections.max.idle.ms = 540000
-	delivery.timeout.ms = 120000
-	enable.idempotence = true
-	interceptor.classes = []
-	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
-	linger.ms = 6
-	max.block.ms = 60000
-	max.in.flight.requests.per.connection = 5
-	max.request.size = 1048576
-	metadata.max.age.ms = 300000
-	metadata.max.idle.ms = 300000
-	metric.reporters = []
-	metrics.num.samples = 2
-	metrics.recording.level = INFO
-	metrics.sample.window.ms = 30000
-	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
-	receive.buffer.bytes = 32768
-	reconnect.backoff.max.ms = 1000
-	reconnect.backoff.ms = 50
-	request.timeout.ms = 30000
-	retries = 3
-	retry.backoff.ms = 100
-	sasl.client.callback.handler.class = null
-	sasl.jaas.config = null
-	sasl.kerberos.kinit.cmd = /usr/bin/kinit
-	sasl.kerberos.min.time.before.relogin = 60000
-	sasl.kerberos.service.name = null
-	sasl.kerberos.ticket.renew.jitter = 0.05
-	sasl.kerberos.ticket.renew.window.factor = 0.8
-	sasl.login.callback.handler.class = null
-	sasl.login.class = null
-	sasl.login.connect.timeout.ms = null
-	sasl.login.read.timeout.ms = null
-	sasl.login.refresh.buffer.seconds = 300
-	sasl.login.refresh.min.period.seconds = 60
-	sasl.login.refresh.window.factor = 0.8
-	sasl.login.refresh.window.jitter = 0.05
-	sasl.login.retry.backoff.max.ms = 10000
-	sasl.login.retry.backoff.ms = 100
-	sasl.mechanism = GSSAPI
-	sasl.oauthbearer.clock.skew.seconds = 30
-	sasl.oauthbearer.expected.audience = null
-	sasl.oauthbearer.expected.issuer = null
-	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
-	sasl.oauthbearer.jwks.endpoint.url = null
-	sasl.oauthbearer.scope.claim.name = scope
-	sasl.oauthbearer.sub.claim.name = sub
-	sasl.oauthbearer.token.endpoint.url = null
-	security.protocol = PLAINTEXT
-	security.providers = null
-	send.buffer.bytes = 131072
-	socket.connection.setup.timeout.max.ms = 30000
-	socket.connection.setup.timeout.ms = 10000
-	ssl.cipher.suites = null
-	ssl.enabled.protocols = [TLSv1.2]
-	ssl.endpoint.identification.algorithm = https
-	ssl.engine.factory.class = null
-	ssl.key.password = null
-	ssl.keymanager.algorithm = SunX509
-	ssl.keystore.certificate.chain = null
-	ssl.keystore.key = null
-	ssl.keystore.location = null
-	ssl.keystore.password = null
-	ssl.keystore.type = JKS
-	ssl.protocol = TLSv1.2
-	ssl.provider = null
-	ssl.secure.random.implementation = null
-	ssl.trustmanager.algorithm = PKIX
-	ssl.truststore.certificates = null
-	ssl.truststore.location = null
-	ssl.truststore.password = null
-	ssl.truststore.type = JKS
-	transaction.timeout.ms = 60000
-	transactional.id = null
-	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
-
-2022-08-30 14:05:58.898 [http-nio-8000-exec-5] INFO  org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
-2022-08-30 14:05:58.928 [http-nio-8000-exec-5] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.1.1
-2022-08-30 14:05:58.928 [http-nio-8000-exec-5] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 97671528ba54a138
-2022-08-30 14:05:58.928 [http-nio-8000-exec-5] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1661839558926
-2022-08-30 14:05:59.204 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition logs-0 to 13 since the associated topicId changed from null to bKeEi_LBR7yj82Ppy81Tyw
-2022-08-30 14:05:59.204 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition logs-2 to 18 since the associated topicId changed from null to bKeEi_LBR7yj82Ppy81Tyw
-2022-08-30 14:05:59.204 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition logs-1 to 17 since the associated topicId changed from null to bKeEi_LBR7yj82Ppy81Tyw
-2022-08-30 14:05:59.206 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: UMzeEXmTT8-leZGbe-_Tkw
-2022-08-30 14:05:59.207 [kafka-producer-network-thread | producer-1] INFO  o.a.k.c.producer.internals.TransactionManager - [Producer clientId=producer-1] ProducerId set to 4015 with epoch 0
-2022-08-30 14:15:23.386 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -2 disconnected.
-2022-08-30 14:20:53.454 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node 2 disconnected.
-2022-08-30 15:57:05.829 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition logs-0 to 13 since the associated topicId changed from null to bKeEi_LBR7yj82Ppy81Tyw
-2022-08-30 15:57:05.829 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition logs-2 to 18 since the associated topicId changed from null to bKeEi_LBR7yj82Ppy81Tyw
-2022-08-30 15:57:05.829 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition logs-1 to 17 since the associated topicId changed from null to bKeEi_LBR7yj82Ppy81Tyw
-2022-08-30 16:11:54.730 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node 2 disconnected.
-2022-08-30 21:10:10.728 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.4.Final
-2022-08-30 21:10:10.778 [main] INFO  com.yyok.YYOKApplicationBootstrap - Starting YYOKApplicationBootstrap using Java 1.8.0_221 on yyok with PID 52489 (/ddhome/local/workspace/yyok/yyok-assemblies/yyok-assembly-boot/target/classes started by root in /ddhome/local/workspace/yyok)
-2022-08-30 21:10:10.779 [main] INFO  com.yyok.YYOKApplicationBootstrap - The following 1 profile is active: "dev"
-2022-08-30 21:10:12.284 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-08-30 21:10:12.291 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$95f29e17] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-08-30 21:10:12.307 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dsProcessor' of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-08-30 21:10:12.567 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8000 (http)
-2022-08-30 21:10:12.572 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8000"]
-2022-08-30 21:10:12.573 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2022-08-30 21:10:12.573 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
-2022-08-30 21:10:12.656 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2022-08-30 21:10:12.657 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1825 ms
-2022-08-30 21:10:12.848 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Starting...
-2022-08-30 21:10:12.965 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Start completed.
-2022-08-30 21:10:12.968 [main] INFO  com.zaxxer.hikari.HikariDataSource - slave - Starting...
-2022-08-30 21:10:12.972 [main] INFO  com.zaxxer.hikari.HikariDataSource - slave - Start completed.
-2022-08-30 21:10:12.974 [main] INFO  com.zaxxer.hikari.HikariDataSource - test - Starting...
-2022-08-30 21:10:12.977 [main] INFO  com.zaxxer.hikari.HikariDataSource - test - Start completed.
-2022-08-30 21:10:12.978 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [slave] success
-2022-08-30 21:10:12.978 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [test] success
-2022-08-30 21:10:12.978 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [master] success
-2022-08-30 21:10:12.978 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource initial loaded [3] datasource,primary datasource named [master]
-2022-08-30 21:10:13.297 [main] INFO  org.dozer.config.GlobalSettings - Trying to find Dozer configuration file: dozer.properties
-2022-08-30 21:10:13.305 [main] INFO  org.dozer.DozerInitializer - Initializing Dozer. Version: 5.5.0, Thread Name: main
-2022-08-30 21:10:13.306 [main] INFO  org.dozer.jmx.JMXPlatformImpl - Dozer JMX MBean [org.dozer.jmx:type=DozerStatisticsController] auto registered with the Platform MBean Server
-2022-08-30 21:10:13.307 [main] INFO  org.dozer.jmx.JMXPlatformImpl - Dozer JMX MBean [org.dozer.jmx:type=DozerAdminController] auto registered with the Platform MBean Server
-2022-08-30 21:10:13.308 [main] INFO  org.dozer.DozerBeanMapper - Initializing a new instance of dozer bean mapper.
-2022-08-30 21:10:14.488 [main] INFO  org.dozer.jmx.JMXPlatformImpl - Unregistering existing Dozer JMX MBean [org.dozer.jmx:type=DozerAdminController].
-2022-08-30 21:10:14.489 [main] INFO  org.dozer.jmx.JMXPlatformImpl - Unregistering existing Dozer JMX MBean [org.dozer.jmx:type=DozerStatisticsController].
-2022-08-30 21:10:14.489 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource start closing ....
-2022-08-30 21:10:14.489 [main] INFO  com.zaxxer.hikari.HikariDataSource - slave - Shutdown initiated...
-2022-08-30 21:10:14.511 [main] INFO  com.zaxxer.hikari.HikariDataSource - slave - Shutdown completed.
-2022-08-30 21:10:14.511 [main] INFO  com.zaxxer.hikari.HikariDataSource - test - Shutdown initiated...
-2022-08-30 21:10:14.520 [main] INFO  com.zaxxer.hikari.HikariDataSource - test - Shutdown completed.
-2022-08-30 21:10:14.520 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Shutdown initiated...
-2022-08-30 21:10:14.526 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Shutdown completed.
-2022-08-30 21:10:14.527 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource all closed success,bye
-2022-08-30 21:10:14.531 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
-2022-08-30 21:10:14.550 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2022-08-30 21:13:10.506 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.4.Final
-2022-08-30 21:13:10.554 [main] INFO  com.yyok.YYOKApplicationBootstrap - Starting YYOKApplicationBootstrap using Java 1.8.0_221 on yyok with PID 53214 (/ddhome/local/workspace/yyok/yyok-assemblies/yyok-assembly-boot/target/classes started by root in /ddhome/local/workspace/yyok)
-2022-08-30 21:13:10.555 [main] INFO  com.yyok.YYOKApplicationBootstrap - The following 1 profile is active: "dev"
-2022-08-30 21:13:12.082 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-08-30 21:13:12.088 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$baedf541] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-08-30 21:13:12.104 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dsProcessor' of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-08-30 21:13:12.370 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8000 (http)
-2022-08-30 21:13:12.375 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8000"]
-2022-08-30 21:13:12.376 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2022-08-30 21:13:12.376 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
-2022-08-30 21:13:12.461 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2022-08-30 21:13:12.461 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1850 ms
-2022-08-30 21:13:12.651 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Starting...
-2022-08-30 21:13:12.767 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Start completed.
-2022-08-30 21:13:12.770 [main] INFO  com.zaxxer.hikari.HikariDataSource - slave - Starting...
-2022-08-30 21:13:12.784 [main] INFO  com.zaxxer.hikari.HikariDataSource - slave - Start completed.
-2022-08-30 21:13:12.786 [main] INFO  com.zaxxer.hikari.HikariDataSource - test - Starting...
-2022-08-30 21:13:12.790 [main] INFO  com.zaxxer.hikari.HikariDataSource - test - Start completed.
-2022-08-30 21:13:12.790 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [slave] success
-2022-08-30 21:13:12.790 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [test] success
-2022-08-30 21:13:12.790 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [master] success
-2022-08-30 21:13:12.790 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource initial loaded [3] datasource,primary datasource named [master]
-2022-08-30 21:13:13.167 [main] INFO  org.dozer.config.GlobalSettings - Trying to find Dozer configuration file: dozer.properties
-2022-08-30 21:13:13.174 [main] INFO  org.dozer.DozerInitializer - Initializing Dozer. Version: 5.5.0, Thread Name: main
-2022-08-30 21:13:13.176 [main] INFO  org.dozer.jmx.JMXPlatformImpl - Dozer JMX MBean [org.dozer.jmx:type=DozerStatisticsController] auto registered with the Platform MBean Server
-2022-08-30 21:13:13.177 [main] INFO  org.dozer.jmx.JMXPlatformImpl - Dozer JMX MBean [org.dozer.jmx:type=DozerAdminController] auto registered with the Platform MBean Server
-2022-08-30 21:13:13.177 [main] INFO  org.dozer.DozerBeanMapper - Initializing a new instance of dozer bean mapper.
-2022-08-30 21:13:14.616 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
-2022-08-30 21:13:14.624 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2022-08-30 21:13:14.625 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
-2022-08-30 21:13:14.625 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
-2022-08-30 21:13:14.626 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
-  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
-  NOT STARTED.
-  Currently in standby mode.
-  Number of jobs executed: 0
-  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
-  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
-
-2022-08-30 21:13:14.626 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'QuartzScheduler' initialized from an externally provided properties instance.
-2022-08-30 21:13:14.626 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
-2022-08-30 21:13:14.627 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: com.yyok.share.admin.quartz.config.QuartzConfig$QuartzJobFactory@31cd0efa
-2022-08-30 21:13:14.627 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED started.
-2022-08-30 21:13:24.110 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@c8ed958, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@18d09283, org.springframework.security.web.context.SecurityContextPersistenceFilter@4f5df012, org.springframework.security.web.header.HeaderWriterFilter@74267ece, org.springframework.security.web.authentication.logout.LogoutFilter@6cd65042, org.springframework.web.filter.CorsFilter@7e2c6fd6, com.yyok.share.admin.security.domain.TokenFilter@751b901a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@20608ef4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@574e4184, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1d0fc0bc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6672b0ea, org.springframework.security.web.session.SessionManagementFilter@574413bd, org.springframework.security.web.access.ExceptionTranslationFilter@62c1259f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@32d8e58d]
-2022-08-30 21:13:24.146 [main] INFO  com.yyok.share.framework.config.RedisConfig - 初始化 -> [Redis CacheErrorHandler]
-2022-08-30 21:13:24.744 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
-2022-08-30 21:13:24.745 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2022-08-30 21:13:24.745 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
-2022-08-30 21:13:24.745 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
-2022-08-30 21:13:24.746 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
-  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
-  NOT STARTED.
-  Currently in standby mode.
-  Number of jobs executed: 0
-  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
-  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
-
-2022-08-30 21:13:24.746 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-2022-08-30 21:13:24.746 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
-2022-08-30 21:13:24.746 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@8929865
-2022-08-30 21:13:24.842 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8000"]
-2022-08-30 21:13:24.854 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8000 (http) with context path ''
-2022-08-30 21:13:25.321 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
-2022-08-30 21:13:25.322 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
-2022-08-30 21:13:25.332 [main] INFO  com.yyok.YYOKApplicationBootstrap - Started YYOKApplicationBootstrap in 15.27 seconds (JVM running for 15.824)
-2022-08-30 21:13:38.147 [http-nio-8000-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-08-30 21:16:42.731 [SpringApplicationShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2022-08-30 21:16:42.744 [SpringApplicationShutdownHook] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
-2022-08-30 21:16:42.744 [SpringApplicationShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-2022-08-30 21:16:42.744 [SpringApplicationShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2022-08-30 21:16:42.744 [SpringApplicationShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
-2022-08-30 21:16:42.752 [SpringApplicationShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED shutting down.
-2022-08-30 21:16:42.752 [SpringApplicationShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED paused.
-2022-08-30 21:16:42.753 [SpringApplicationShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED shutdown complete.
-2022-08-30 21:16:42.879 [SpringApplicationShutdownHook] INFO  org.dozer.jmx.JMXPlatformImpl - Unregistering existing Dozer JMX MBean [org.dozer.jmx:type=DozerAdminController].
-2022-08-30 21:16:42.879 [SpringApplicationShutdownHook] INFO  org.dozer.jmx.JMXPlatformImpl - Unregistering existing Dozer JMX MBean [org.dozer.jmx:type=DozerStatisticsController].
-2022-08-30 21:16:42.881 [SpringApplicationShutdownHook] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource start closing ....
-2022-08-30 21:16:42.882 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - slave - Shutdown initiated...
-2022-08-30 21:16:42.892 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - slave - Shutdown completed.
-2022-08-30 21:16:42.892 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - test - Shutdown initiated...
-2022-08-30 21:16:42.898 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - test - Shutdown completed.
-2022-08-30 21:16:42.898 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - master - Shutdown initiated...
-2022-08-30 21:16:42.902 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - master - Shutdown completed.
-2022-08-30 21:16:42.902 [SpringApplicationShutdownHook] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource all closed success,bye
-2022-08-30 21:20:58.848 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.4.Final
-2022-08-30 21:20:58.896 [main] INFO  com.yyok.YYOKApplicationBootstrap - Starting YYOKApplicationBootstrap using Java 1.8.0_221 on yyok with PID 54257 (/ddhome/local/workspace/yyok/yyok-assemblies/yyok-assembly-boot/target/classes started by root in /ddhome/local/workspace/yyok)
-2022-08-30 21:20:58.897 [main] INFO  com.yyok.YYOKApplicationBootstrap - The following 1 profile is active: "dev"
-2022-08-30 21:21:00.504 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-08-30 21:21:00.512 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$f2492f52] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-08-30 21:21:00.530 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dsProcessor' of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-08-30 21:21:00.866 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8000 (http)
-2022-08-30 21:21:00.872 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8000"]
-2022-08-30 21:21:00.873 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2022-08-30 21:21:00.873 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
-2022-08-30 21:21:00.966 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2022-08-30 21:21:00.966 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2015 ms
-2022-08-30 21:21:01.167 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Starting...
-2022-08-30 21:21:01.331 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Start completed.
-2022-08-30 21:21:01.334 [main] INFO  com.zaxxer.hikari.HikariDataSource - slave - Starting...
-2022-08-30 21:21:01.343 [main] INFO  com.zaxxer.hikari.HikariDataSource - slave - Start completed.
-2022-08-30 21:21:01.345 [main] INFO  com.zaxxer.hikari.HikariDataSource - test - Starting...
-2022-08-30 21:21:01.349 [main] INFO  com.zaxxer.hikari.HikariDataSource - test - Start completed.
-2022-08-30 21:21:01.350 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [slave] success
-2022-08-30 21:21:01.350 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [test] success
-2022-08-30 21:21:01.350 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [master] success
-2022-08-30 21:21:01.350 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource initial loaded [3] datasource,primary datasource named [master]
-2022-08-30 21:21:01.721 [main] INFO  org.dozer.config.GlobalSettings - Trying to find Dozer configuration file: dozer.properties
-2022-08-30 21:21:01.729 [main] INFO  org.dozer.DozerInitializer - Initializing Dozer. Version: 5.5.0, Thread Name: main
-2022-08-30 21:21:01.731 [main] INFO  org.dozer.jmx.JMXPlatformImpl - Dozer JMX MBean [org.dozer.jmx:type=DozerStatisticsController] auto registered with the Platform MBean Server
-2022-08-30 21:21:01.732 [main] INFO  org.dozer.jmx.JMXPlatformImpl - Dozer JMX MBean [org.dozer.jmx:type=DozerAdminController] auto registered with the Platform MBean Server
-2022-08-30 21:21:01.732 [main] INFO  org.dozer.DozerBeanMapper - Initializing a new instance of dozer bean mapper.
-2022-08-30 21:21:03.188 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
-2022-08-30 21:21:03.197 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2022-08-30 21:21:03.197 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
-2022-08-30 21:21:03.198 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
-2022-08-30 21:21:03.198 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
-  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
-  NOT STARTED.
-  Currently in standby mode.
-  Number of jobs executed: 0
-  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
-  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
-
-2022-08-30 21:21:03.198 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'QuartzScheduler' initialized from an externally provided properties instance.
-2022-08-30 21:21:03.199 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
-2022-08-30 21:21:03.199 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: com.yyok.share.admin.quartz.config.QuartzConfig$QuartzJobFactory@1e836aed
-2022-08-30 21:21:03.199 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED started.
-2022-08-30 21:21:04.981 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6b6fde93, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@51d34f02, org.springframework.security.web.context.SecurityContextPersistenceFilter@6cd65042, org.springframework.security.web.header.HeaderWriterFilter@53b9952f, org.springframework.security.web.authentication.logout.LogoutFilter@4144d4a, org.springframework.web.filter.CorsFilter@778c2e7c, com.yyok.share.admin.security.domain.TokenFilter@441762b8, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7c31e01f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4b5ceb5d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3a574a3b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2d2fe68a, org.springframework.security.web.session.SessionManagementFilter@7e5c8c80, org.springframework.security.web.access.ExceptionTranslationFilter@50d6af87, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@543c887]
-2022-08-30 21:21:05.002 [main] INFO  com.yyok.share.framework.config.RedisConfig - 初始化 -> [Redis CacheErrorHandler]
-2022-08-30 21:21:05.536 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
-2022-08-30 21:21:05.538 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2022-08-30 21:21:05.538 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
-2022-08-30 21:21:05.538 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
-2022-08-30 21:21:05.538 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
-  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
-  NOT STARTED.
-  Currently in standby mode.
-  Number of jobs executed: 0
-  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
-  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
-
-2022-08-30 21:21:05.538 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-2022-08-30 21:21:05.538 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
-2022-08-30 21:21:05.538 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@65fa1cd
-2022-08-30 21:21:05.632 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8000"]
-2022-08-30 21:21:05.644 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8000 (http) with context path ''
-2022-08-30 21:21:06.103 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
-2022-08-30 21:21:06.103 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
-2022-08-30 21:21:06.113 [main] INFO  com.yyok.YYOKApplicationBootstrap - Started YYOKApplicationBootstrap in 7.742 seconds (JVM running for 8.284)
-2022-08-30 21:23:52.065 [http-nio-8000-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-08-30 21:24:40.385 [http-nio-8000-exec-4] INFO  org.dozer.DozerBeanMapper - Using the following xml files to load custom mappings for the bean mapper instance: [file:/ddhome/local/workspace/yyok/yyok-shares/yyok-share-framework/target/classes/dozer/bean-mappings.xml, file:/ddhome/local/workspace/yyok/yyok-shares/yyok-share-framework/target/classes/dozer/global-configuration.xml]
-2022-08-30 21:24:40.386 [http-nio-8000-exec-4] INFO  org.dozer.DozerBeanMapper - Trying to find xml mapping file: file:/ddhome/local/workspace/yyok/yyok-shares/yyok-share-framework/target/classes/dozer/bean-mappings.xml
-2022-08-30 21:24:40.387 [http-nio-8000-exec-4] INFO  org.dozer.DozerBeanMapper - Using URL [file:/ddhome/local/workspace/yyok/yyok-shares/yyok-share-framework/target/classes/dozer/bean-mappings.xml] to load custom xml mappings
-2022-08-30 21:24:40.477 [http-nio-8000-exec-4] INFO  org.dozer.DozerBeanMapper - Successfully loaded custom xml mappings from URL: [file:/ddhome/local/workspace/yyok/yyok-shares/yyok-share-framework/target/classes/dozer/bean-mappings.xml]
-2022-08-30 21:24:40.477 [http-nio-8000-exec-4] INFO  org.dozer.DozerBeanMapper - Trying to find xml mapping file: file:/ddhome/local/workspace/yyok/yyok-shares/yyok-share-framework/target/classes/dozer/global-configuration.xml
-2022-08-30 21:24:40.478 [http-nio-8000-exec-4] INFO  org.dozer.DozerBeanMapper - Using URL [file:/ddhome/local/workspace/yyok/yyok-shares/yyok-share-framework/target/classes/dozer/global-configuration.xml] to load custom xml mappings
-2022-08-30 21:24:40.486 [http-nio-8000-exec-4] INFO  org.dozer.DozerBeanMapper - Successfully loaded custom xml mappings from URL: [file:/ddhome/local/workspace/yyok/yyok-shares/yyok-share-framework/target/classes/dozer/global-configuration.xml]
-2022-08-30 21:24:40.899 [http-nio-8000-exec-4] INFO  org.apache.kafka.clients.producer.ProducerConfig - ProducerConfig values: 
-	acks = -1
-	batch.size = 16384
-	bootstrap.servers = [192.168.10.36:9092, 192.168.10.38:9092, 192.168.10.39:9092]
-	buffer.memory = 33554432
-	client.dns.lookup = use_all_dns_ips
-	client.id = producer-1
-	compression.type = none
-	connections.max.idle.ms = 540000
-	delivery.timeout.ms = 120000
-	enable.idempotence = true
-	interceptor.classes = []
-	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
-	linger.ms = 6
-	max.block.ms = 60000
-	max.in.flight.requests.per.connection = 5
-	max.request.size = 1048576
-	metadata.max.age.ms = 300000
-	metadata.max.idle.ms = 300000
-	metric.reporters = []
-	metrics.num.samples = 2
-	metrics.recording.level = INFO
-	metrics.sample.window.ms = 30000
-	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
-	receive.buffer.bytes = 32768
-	reconnect.backoff.max.ms = 1000
-	reconnect.backoff.ms = 50
-	request.timeout.ms = 30000
-	retries = 3
-	retry.backoff.ms = 100
-	sasl.client.callback.handler.class = null
-	sasl.jaas.config = null
-	sasl.kerberos.kinit.cmd = /usr/bin/kinit
-	sasl.kerberos.min.time.before.relogin = 60000
-	sasl.kerberos.service.name = null
-	sasl.kerberos.ticket.renew.jitter = 0.05
-	sasl.kerberos.ticket.renew.window.factor = 0.8
-	sasl.login.callback.handler.class = null
-	sasl.login.class = null
-	sasl.login.connect.timeout.ms = null
-	sasl.login.read.timeout.ms = null
-	sasl.login.refresh.buffer.seconds = 300
-	sasl.login.refresh.min.period.seconds = 60
-	sasl.login.refresh.window.factor = 0.8
-	sasl.login.refresh.window.jitter = 0.05
-	sasl.login.retry.backoff.max.ms = 10000
-	sasl.login.retry.backoff.ms = 100
-	sasl.mechanism = GSSAPI
-	sasl.oauthbearer.clock.skew.seconds = 30
-	sasl.oauthbearer.expected.audience = null
-	sasl.oauthbearer.expected.issuer = null
-	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
-	sasl.oauthbearer.jwks.endpoint.url = null
-	sasl.oauthbearer.scope.claim.name = scope
-	sasl.oauthbearer.sub.claim.name = sub
-	sasl.oauthbearer.token.endpoint.url = null
-	security.protocol = PLAINTEXT
-	security.providers = null
-	send.buffer.bytes = 131072
-	socket.connection.setup.timeout.max.ms = 30000
-	socket.connection.setup.timeout.ms = 10000
-	ssl.cipher.suites = null
-	ssl.enabled.protocols = [TLSv1.2]
-	ssl.endpoint.identification.algorithm = https
-	ssl.engine.factory.class = null
-	ssl.key.password = null
-	ssl.keymanager.algorithm = SunX509
-	ssl.keystore.certificate.chain = null
-	ssl.keystore.key = null
-	ssl.keystore.location = null
-	ssl.keystore.password = null
-	ssl.keystore.type = JKS
-	ssl.protocol = TLSv1.2
-	ssl.provider = null
-	ssl.secure.random.implementation = null
-	ssl.trustmanager.algorithm = PKIX
-	ssl.truststore.certificates = null
-	ssl.truststore.location = null
-	ssl.truststore.password = null
-	ssl.truststore.type = JKS
-	transaction.timeout.ms = 60000
-	transactional.id = null
-	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
-
-2022-08-30 21:24:40.919 [http-nio-8000-exec-4] INFO  org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
-2022-08-30 21:24:40.951 [http-nio-8000-exec-4] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.1.1
-2022-08-30 21:24:40.952 [http-nio-8000-exec-4] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 97671528ba54a138
-2022-08-30 21:24:40.952 [http-nio-8000-exec-4] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1661865880950
-2022-08-30 21:24:41.181 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
-2022-08-30 21:24:41.263 [kafka-producer-network-thread | producer-1] INFO  o.a.k.c.producer.internals.TransactionManager - [Producer clientId=producer-1] ProducerId set to 5014 with epoch 0
-2022-08-30 21:24:41.292 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition logs-0 to 13 since the associated topicId changed from null to bKeEi_LBR7yj82Ppy81Tyw
-2022-08-30 21:24:41.292 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition logs-2 to 18 since the associated topicId changed from null to bKeEi_LBR7yj82Ppy81Tyw
-2022-08-30 21:24:41.292 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition logs-1 to 17 since the associated topicId changed from null to bKeEi_LBR7yj82Ppy81Tyw
-2022-08-30 21:24:41.294 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: UMzeEXmTT8-leZGbe-_Tkw
-2022-08-30 21:32:55.411 [SpringApplicationShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2022-08-30 21:32:55.429 [SpringApplicationShutdownHook] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
-2022-08-30 21:32:55.429 [SpringApplicationShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-2022-08-30 21:32:55.429 [SpringApplicationShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2022-08-30 21:32:55.430 [SpringApplicationShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
-2022-08-30 21:32:55.440 [SpringApplicationShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED shutting down.
-2022-08-30 21:32:55.440 [SpringApplicationShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED paused.
-2022-08-30 21:32:55.445 [SpringApplicationShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED shutdown complete.
-2022-08-30 21:33:18.856 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.4.Final
-2022-08-30 21:33:18.904 [main] INFO  com.yyok.YYOKApplicationBootstrap - Starting YYOKApplicationBootstrap using Java 1.8.0_221 on yyok with PID 55610 (/ddhome/local/workspace/yyok/yyok-assemblies/yyok-assembly-boot/target/classes started by root in /ddhome/local/workspace/yyok)
-2022-08-30 21:33:18.905 [main] INFO  com.yyok.YYOKApplicationBootstrap - The following 1 profile is active: "dev"
-2022-08-30 21:33:20.484 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-08-30 21:33:20.490 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$2728845f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-08-30 21:33:20.506 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dsProcessor' of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-08-30 21:33:20.781 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8000 (http)
-2022-08-30 21:33:20.787 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8000"]
-2022-08-30 21:33:20.787 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2022-08-30 21:33:20.787 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
-2022-08-30 21:33:20.879 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2022-08-30 21:33:20.880 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1920 ms
-2022-08-30 21:33:21.080 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Starting...
-2022-08-30 21:33:21.201 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Start completed.
-2022-08-30 21:33:21.204 [main] INFO  com.zaxxer.hikari.HikariDataSource - slave - Starting...
-2022-08-30 21:33:21.210 [main] INFO  com.zaxxer.hikari.HikariDataSource - slave - Start completed.
-2022-08-30 21:33:21.212 [main] INFO  com.zaxxer.hikari.HikariDataSource - test - Starting...
-2022-08-30 21:33:21.215 [main] INFO  com.zaxxer.hikari.HikariDataSource - test - Start completed.
-2022-08-30 21:33:21.216 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [slave] success
-2022-08-30 21:33:21.216 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [test] success
-2022-08-30 21:33:21.216 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [master] success
-2022-08-30 21:33:21.216 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource initial loaded [3] datasource,primary datasource named [master]
-2022-08-30 21:33:21.584 [main] INFO  org.dozer.config.GlobalSettings - Trying to find Dozer configuration file: dozer.properties
-2022-08-30 21:33:21.592 [main] INFO  org.dozer.DozerInitializer - Initializing Dozer. Version: 5.5.0, Thread Name: main
-2022-08-30 21:33:21.593 [main] INFO  org.dozer.jmx.JMXPlatformImpl - Dozer JMX MBean [org.dozer.jmx:type=DozerStatisticsController] auto registered with the Platform MBean Server
-2022-08-30 21:33:21.594 [main] INFO  org.dozer.jmx.JMXPlatformImpl - Dozer JMX MBean [org.dozer.jmx:type=DozerAdminController] auto registered with the Platform MBean Server
-2022-08-30 21:33:21.594 [main] INFO  org.dozer.DozerBeanMapper - Initializing a new instance of dozer bean mapper.
-2022-08-30 21:33:23.100 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
-2022-08-30 21:33:23.109 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2022-08-30 21:33:23.109 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
-2022-08-30 21:33:23.110 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
-2022-08-30 21:33:23.110 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
-  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
-  NOT STARTED.
-  Currently in standby mode.
-  Number of jobs executed: 0
-  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
-  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
-
-2022-08-30 21:33:23.111 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'QuartzScheduler' initialized from an externally provided properties instance.
-2022-08-30 21:33:23.111 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
-2022-08-30 21:33:23.111 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: com.yyok.share.admin.quartz.config.QuartzConfig$QuartzJobFactory@5598dff2
-2022-08-30 21:33:23.111 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED started.
-2022-08-30 21:33:24.918 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3cc548f6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3fed0c04, org.springframework.security.web.context.SecurityContextPersistenceFilter@188b9a1e, org.springframework.security.web.header.HeaderWriterFilter@308d4981, org.springframework.security.web.authentication.logout.LogoutFilter@95aeee4, org.springframework.web.filter.CorsFilter@1ddf42dd, com.yyok.share.admin.security.domain.TokenFilter@563bd6a4, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@59509393, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5d56c2d2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@22349ad3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3549c070, org.springframework.security.web.session.SessionManagementFilter@73753326, org.springframework.security.web.access.ExceptionTranslationFilter@3f465ae, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@14b4b25e]
-2022-08-30 21:33:24.946 [main] INFO  com.yyok.share.framework.config.RedisConfig - 初始化 -> [Redis CacheErrorHandler]
-2022-08-30 21:33:25.504 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
-2022-08-30 21:33:25.505 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2022-08-30 21:33:25.505 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
-2022-08-30 21:33:25.505 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
-2022-08-30 21:33:25.505 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
-  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
-  NOT STARTED.
-  Currently in standby mode.
-  Number of jobs executed: 0
-  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
-  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
-
-2022-08-30 21:33:25.505 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-2022-08-30 21:33:25.506 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
-2022-08-30 21:33:25.506 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@23ee31b8
-2022-08-30 21:33:25.601 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8000"]
-2022-08-30 21:33:25.612 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8000 (http) with context path ''
-2022-08-30 21:33:26.096 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
-2022-08-30 21:33:26.096 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
-2022-08-30 21:33:26.107 [main] INFO  com.yyok.YYOKApplicationBootstrap - Started YYOKApplicationBootstrap in 7.69 seconds (JVM running for 8.253)
-2022-08-30 21:46:39.739 [http-nio-8000-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-08-30 21:47:34.499 [SpringApplicationShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2022-08-30 21:47:34.622 [SpringApplicationShutdownHook] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
-2022-08-30 21:47:34.622 [SpringApplicationShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-2022-08-30 21:47:34.622 [SpringApplicationShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2022-08-30 21:47:34.623 [SpringApplicationShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
-2022-08-30 21:47:34.632 [SpringApplicationShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED shutting down.
-2022-08-30 21:47:34.632 [SpringApplicationShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED paused.
-2022-08-30 21:47:34.633 [SpringApplicationShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED shutdown complete.
-2022-08-30 21:47:34.763 [SpringApplicationShutdownHook] INFO  org.dozer.jmx.JMXPlatformImpl - Unregistering existing Dozer JMX MBean [org.dozer.jmx:type=DozerAdminController].
-2022-08-30 21:47:34.764 [SpringApplicationShutdownHook] INFO  org.dozer.jmx.JMXPlatformImpl - Unregistering existing Dozer JMX MBean [org.dozer.jmx:type=DozerStatisticsController].
-2022-08-30 21:47:34.766 [SpringApplicationShutdownHook] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource start closing ....
-2022-08-30 21:47:34.766 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - slave - Shutdown initiated...
-2022-08-30 21:47:34.780 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - slave - Shutdown completed.
-2022-08-30 21:47:34.780 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - test - Shutdown initiated...
-2022-08-30 21:47:34.785 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - test - Shutdown completed.
-2022-08-30 21:47:34.785 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - master - Shutdown initiated...
-2022-08-30 21:47:34.789 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - master - Shutdown completed.
-2022-08-30 21:47:34.789 [SpringApplicationShutdownHook] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource all closed success,bye
-2022-08-30 21:47:55.959 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.4.Final
-2022-08-30 21:47:55.999 [main] INFO  com.yyok.YYOKApplicationBootstrap - Starting YYOKApplicationBootstrap using Java 1.8.0_221 on yyok with PID 57073 (/ddhome/local/workspace/yyok/yyok-assemblies/yyok-assembly-boot/target/classes started by root in /ddhome/local/workspace/yyok)
-2022-08-30 21:47:56.000 [main] INFO  com.yyok.YYOKApplicationBootstrap - The following 1 profile is active: "dev"
-2022-08-30 21:47:57.475 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-08-30 21:47:57.482 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$13b887c1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-08-30 21:47:57.499 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dsProcessor' of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-08-30 21:47:57.764 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8000 (http)
-2022-08-30 21:47:57.770 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8000"]
-2022-08-30 21:47:57.770 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2022-08-30 21:47:57.770 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
-2022-08-30 21:47:57.855 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2022-08-30 21:47:57.855 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1804 ms
-2022-08-30 21:47:58.042 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Starting...
-2022-08-30 21:47:58.157 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Start completed.
-2022-08-30 21:47:58.159 [main] INFO  com.zaxxer.hikari.HikariDataSource - slave - Starting...
-2022-08-30 21:47:58.172 [main] INFO  com.zaxxer.hikari.HikariDataSource - slave - Start completed.
-2022-08-30 21:47:58.174 [main] INFO  com.zaxxer.hikari.HikariDataSource - test - Starting...
-2022-08-30 21:47:58.177 [main] INFO  com.zaxxer.hikari.HikariDataSource - test - Start completed.
-2022-08-30 21:47:58.178 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [slave] success
-2022-08-30 21:47:58.178 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [test] success
-2022-08-30 21:47:58.178 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [master] success
-2022-08-30 21:47:58.178 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource initial loaded [3] datasource,primary datasource named [master]
-2022-08-30 21:47:58.502 [main] INFO  org.dozer.config.GlobalSettings - Trying to find Dozer configuration file: dozer.properties
-2022-08-30 21:47:58.510 [main] INFO  org.dozer.DozerInitializer - Initializing Dozer. Version: 5.5.0, Thread Name: main
-2022-08-30 21:47:58.512 [main] INFO  org.dozer.jmx.JMXPlatformImpl - Dozer JMX MBean [org.dozer.jmx:type=DozerStatisticsController] auto registered with the Platform MBean Server
-2022-08-30 21:47:58.512 [main] INFO  org.dozer.jmx.JMXPlatformImpl - Dozer JMX MBean [org.dozer.jmx:type=DozerAdminController] auto registered with the Platform MBean Server
-2022-08-30 21:47:58.513 [main] INFO  org.dozer.DozerBeanMapper - Initializing a new instance of dozer bean mapper.
-2022-08-30 21:47:59.918 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
-2022-08-30 21:47:59.927 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2022-08-30 21:47:59.927 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
-2022-08-30 21:47:59.927 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
-2022-08-30 21:47:59.928 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
-  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
-  NOT STARTED.
-  Currently in standby mode.
-  Number of jobs executed: 0
-  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
-  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
-
-2022-08-30 21:47:59.928 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'QuartzScheduler' initialized from an externally provided properties instance.
-2022-08-30 21:47:59.928 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
-2022-08-30 21:47:59.929 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: com.yyok.share.admin.quartz.config.QuartzConfig$QuartzJobFactory@7792e14f
-2022-08-30 21:47:59.929 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED started.
-2022-08-30 21:48:01.724 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6413eeb7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@956cf3d, org.springframework.security.web.context.SecurityContextPersistenceFilter@7e35d743, org.springframework.security.web.header.HeaderWriterFilter@3958db82, org.springframework.security.web.authentication.logout.LogoutFilter@112b3298, org.springframework.web.filter.CorsFilter@5c4714ef, com.yyok.share.admin.security.domain.TokenFilter@712213ed, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@504b4a97, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@70d16858, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2dc77962, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@58189132, org.springframework.security.web.session.SessionManagementFilter@2b06c388, org.springframework.security.web.access.ExceptionTranslationFilter@6eb332d1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@47fbf95e]
-2022-08-30 21:48:01.745 [main] INFO  com.yyok.share.framework.config.RedisConfig - 初始化 -> [Redis CacheErrorHandler]
-2022-08-30 21:48:02.375 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
-2022-08-30 21:48:02.377 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2022-08-30 21:48:02.377 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
-2022-08-30 21:48:02.377 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
-2022-08-30 21:48:02.377 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
-  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
-  NOT STARTED.
-  Currently in standby mode.
-  Number of jobs executed: 0
-  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
-  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
-
-2022-08-30 21:48:02.377 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-2022-08-30 21:48:02.377 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
-2022-08-30 21:48:02.377 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@1ac30be4
-2022-08-30 21:48:02.473 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8000"]
-2022-08-30 21:48:02.486 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8000 (http) with context path ''
-2022-08-30 21:48:02.955 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
-2022-08-30 21:48:02.955 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
-2022-08-30 21:48:02.965 [main] INFO  com.yyok.YYOKApplicationBootstrap - Started YYOKApplicationBootstrap in 7.428 seconds (JVM running for 8.031)
-2022-08-30 21:48:14.222 [http-nio-8000-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-08-30 21:49:58.152 [http-nio-8000-exec-10] INFO  c.y.a.admin.pki.controller.CertificatesController - Received new self-signed certificate request
+2022-09-08 19:00:23.475 [main] INFO  org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2022-09-08 19:00:23.504 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.1.1
+2022-09-08 19:00:23.504 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 97671528ba54a138
+2022-09-08 19:00:23.504 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1662634823502
+2022-09-08 19:00:23.802 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition logs-0 to 14 since the associated topicId changed from null to bKeEi_LBR7yj82Ppy81Tyw
+2022-09-08 19:00:23.802 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition logs-2 to 18 since the associated topicId changed from null to bKeEi_LBR7yj82Ppy81Tyw
+2022-09-08 19:00:23.802 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition logs-1 to 17 since the associated topicId changed from null to bKeEi_LBR7yj82Ppy81Tyw
+2022-09-08 19:00:23.804 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: UMzeEXmTT8-leZGbe-_Tkw
+2022-09-08 19:00:23.805 [kafka-producer-network-thread | producer-1] INFO  o.a.k.c.producer.internals.TransactionManager - [Producer clientId=producer-1] ProducerId set to 4023 with epoch 0
+2022-09-08 19:03:08.929 [http-nio-8000-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-08 19:09:24.004 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
+2022-09-08 19:09:24.009 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -2 disconnected.

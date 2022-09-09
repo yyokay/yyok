@@ -19,10 +19,7 @@ import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
-import java.util.Random;
+import java.util.*;
 
 /**
  * File工具类，扩展 hutool 工具包
@@ -432,5 +429,56 @@ public class FileUtil extends cn.hutool.core.io.FileUtil {
                 || ub == Character.UnicodeBlock.HALFWIDTH_AND_FULLWIDTH_FORMS;
 
     }
+    /**
+     * 写入文件
+     * @param target
+     * @param src
+     * @throws IOException
+     */
+    public static void write(String target, InputStream src) throws IOException {
+        OutputStream os = new FileOutputStream(target);
+        byte[] buf = new byte[1024];
+        int len;
+        while (-1 != (len = src.read(buf))) {
+            os.write(buf,0,len);
+        }
+        os.flush();
+        os.close();
+    }
+
+    /**
+     * 分块写入文件
+     * @param target
+     * @param targetSize
+     * @param src
+     * @param srcSize
+     * @param chunks
+     * @param chunk
+     * @throws IOException
+     */
+    public static void writeWithBlok(String target, Long targetSize, InputStream src, Long srcSize, Integer chunks, Integer chunk) throws IOException {
+        RandomAccessFile randomAccessFile = new RandomAccessFile(target,"rw");
+        randomAccessFile.setLength(targetSize);
+        if (chunk == chunks - 1) {
+            randomAccessFile.seek(targetSize - srcSize);
+        } else {
+            randomAccessFile.seek(chunk * srcSize);
+        }
+        byte[] buf = new byte[1024];
+        int len;
+        while (-1 != (len = src.read(buf))) {
+            randomAccessFile.write(buf,0,len);
+        }
+        randomAccessFile.close();
+    }
+
+    /**
+     * 生成随机文件名
+     * @return
+     */
+    public static String generateFileName() {
+        return UUID.randomUUID().toString();
+    }
+
 
 }

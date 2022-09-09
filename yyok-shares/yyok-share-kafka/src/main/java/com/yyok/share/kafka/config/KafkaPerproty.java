@@ -34,7 +34,7 @@ public class KafkaPerproty {
     /**
      * ConsumerConfigs
      */
-    @Value("${spring.kafka.consumer.servers}")
+    @Value("${spring.kafka.bootstrap-servers}")
     private String servers;
     @Value("${spring.kafka.consumer.enable.auto.commit}")
     private boolean enableAutoCommit;

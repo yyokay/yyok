@@ -1,0 +1,20 @@
+package com.yyok.share.admin.mnt.service.dto;
+
+import com.yyok.share.framework.mapper.annotation.Query;
+import lombok.Data;
+import java.sql.Timestamp;
+import java.util.List;
+
+@Data
+public class DeployQueryCriteria{
+
+	/**
+	 * 模糊
+	 */
+    @Query(type = Query.Type.INNER_LIKE, propName = "name")
+    private String appName;
+
+	@Query(type = Query.Type.BETWEEN)
+	private List<Timestamp> createTime;
+
+}

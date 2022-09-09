@@ -1,5 +1,7 @@
 package com.yyok.share.framework.mapper.annotation;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
+
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
