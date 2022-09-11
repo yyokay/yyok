@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.yyok.ml</groupId>
+    <groupId>com.yyok.ml</groupId>y6
     <artifactId>yyok-lib-mls</artifactId>
 
     <properties>
