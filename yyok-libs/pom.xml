@@ -11,14 +11,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <packaging>pom</packaging>
-    <modules>
-        <module>yyok-lib-mls</module>
-        <module>yyok-lib-linuxs</module>
-        <module>yyok-lib-acquisite</module>
-        <module>yyok-lib-docs</module>
-    </modules>
+
     <groupId>com.yyok.lib</groupId>
     <artifactId>yyok-libs</artifactId>
+    <version>1.0.0</version>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -32,5 +28,13 @@
             <version>1.0.0</version>
         </dependency>
     </dependencies>
-    
+
+
+    <modules>
+        <module>yyok-lib-mls</module>
+        <module>yyok-lib-linuxs</module>
+        <module>yyok-lib-acquisite</module>
+        <module>yyok-lib-docs</module>
+    </modules>
+
 </project>
