@@ -1,2 +1,0 @@
-2022-09-08 19:00:23.280 [main] ERROR com.yyok.share.framework.mapper.config.MetaHandler - 2022-09-08 19:00:23.28-- java.lang.NullPointerException MetaHandler.java Line 98
-2022-09-08 19:00:23.282 [main] ERROR com.yyok.share.framework.mapper.config.MetaHandler - 2022-09-08 19:00:23.282-- java.lang.NullPointerException MetaHandler.java Line 98
