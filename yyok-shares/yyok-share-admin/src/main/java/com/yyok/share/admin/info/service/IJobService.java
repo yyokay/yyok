@@ -42,4 +42,5 @@ public interface IJobService extends IBaseService<Job> {
      * @throws IOException /
      */
     void download(List<JobDto> all, HttpServletResponse response) throws IOException;
+
 }

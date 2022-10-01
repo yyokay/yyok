@@ -19,5 +19,8 @@
 
     <modules>
         <module>yyok-api-admin</module>
+        <module>yyok-api-views</module>
+        <module>yyok-api-datax</module>
+        <module>yyok-api-bbs</module>
     </modules>
 </project>

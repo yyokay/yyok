@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.yyok.share.kpi</groupId>
+    <groupId>com.yyok.share.pki</groupId>
     <artifactId>yyok-share-pkis</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>

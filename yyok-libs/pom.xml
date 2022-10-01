@@ -2,19 +2,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>yyok</artifactId>
         <groupId>com.yyok</groupId>
         <version>1.0.0</version>
     </parent>
 
-    <modelVersion>4.0.0</modelVersion>
-
-    <packaging>pom</packaging>
-
     <groupId>com.yyok.lib</groupId>
     <artifactId>yyok-libs</artifactId>
     <version>1.0.0</version>
+    <packaging>pom</packaging>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -35,6 +33,9 @@
         <module>yyok-lib-linuxs</module>
         <module>yyok-lib-acquisite</module>
         <module>yyok-lib-docs</module>
+        <module>yyok-lib-bbs</module>
+        <module>yyok-lib-ods</module>
+        <module>yyok-lib-views</module>
     </modules>
 
 </project>

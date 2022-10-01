@@ -11,7 +11,7 @@ spring:
           # 使用ip注册进来
           prefer-ip: true
         # admin-server地址
-        url: http://127.0.0.1:9000
+        url: http://127.0.0.1:2000
         # admin-server security用户名
         username: yyok
         # admin-server security密码

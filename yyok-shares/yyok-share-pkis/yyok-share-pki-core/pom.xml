@@ -4,13 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>yyok-share-pkis</artifactId>
-        <groupId>com.yyok.share.kpi</groupId>
+        <groupId>com.yyok.share.pki</groupId>
         <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>yyok-share-pki-core</artifactId>
-    <groupId>com.yyok.share.kpi.core</groupId>
+    <groupId>com.yyok.share.pki.core</groupId>
     <version>1.0.0</version>
 
     <properties>

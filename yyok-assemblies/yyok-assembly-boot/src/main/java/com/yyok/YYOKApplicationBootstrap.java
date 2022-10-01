@@ -9,6 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
 import org.springframework.boot.web.servlet.server.ServletWebServerFactory;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Primary;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -36,8 +37,9 @@ public class YYOKApplicationBootstrap {
         System.out.println("--------------------启动成功 ---------------------");
     }
 
-    @Bean
-    public SpringContextHolder springContextHolder() {
+    @Bean("springContextHolders")
+    @Primary
+    public SpringContextHolder springContextHolders() {
         return new SpringContextHolder();
     }
 

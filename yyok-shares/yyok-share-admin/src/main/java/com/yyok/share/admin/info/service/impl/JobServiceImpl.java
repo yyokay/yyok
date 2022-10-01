@@ -10,19 +10,24 @@ import com.yyok.share.admin.info.service.mapper.IJobMapper;
 import com.yyok.share.framework.dozer.service.IGenerator;
 import com.yyok.share.framework.mapper.common.service.impl.BaseServiceImpl;
 import com.yyok.share.framework.mapper.common.utils.QueryHelpPlus;
+import com.yyok.share.framework.utils.DateUtils;
 import com.yyok.share.framework.utils.FileUtil;
 import lombok.AllArgsConstructor;
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.text.MessageFormat;
+import java.text.ParseException;
+import java.util.*;
+import java.util.stream.Collectors;
 
 // 默认不使用缓存
 //import org.springframework.cache.annotation.CacheConfig;
@@ -100,4 +105,5 @@ public class JobServiceImpl extends BaseServiceImpl<IJobMapper, Job> implements 
     public boolean updateByCode(Job coder) {
         return false;
     }
+
 }

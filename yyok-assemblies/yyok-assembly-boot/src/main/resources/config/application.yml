@@ -30,14 +30,14 @@ spring:
           # 使用ip注册进来
           prefer-ip: true
         # admin-server地址
-        url: http://127.0.0.1:9000
+        url: http://127.0.0.1:2000
         # admin-server security用户名
         username: yyok
         # admin-server security密码
         password: yyok
 security:
   basic:
-    enabled: false
+    enabled: true
   user:
     name: yyok
     password: yyok
@@ -76,7 +76,6 @@ security:
             issuer-uri: http://${sever.ip}:${server.port}
   resource:
     userInfoUri: http://${sever.ip}:${server.port}/api/auth/user/me
-
 
 # Oauth2资源服务资源访问地址
 messages:
