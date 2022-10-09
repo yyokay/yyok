@@ -97,18 +97,18 @@
             <el-button
               v-permission="['admin','roles:edit']"
               :disabled="!showButton"
-              :loading="menuLoading"
+              :loading="resourceLoading"
               icon="el-icon-check"
               size="mini"
               style="float: right; padding: 6px 9px"
               type="primary"
-              @click="saveMenu"
+              @click="saveResource"
             >保存</el-button>
           </div>
           <el-tree
-            ref="menu"
-            :data="menus"
-            :default-checked-keys="menuIds"
+            ref="resource"
+            :data="resources"
+            :default-checked-keys="coder"
             :props="defaultProps"
             check-strictly
             accordion
@@ -134,8 +134,8 @@ import Treeselect from '@riophae/vue-treeselect'
 import '@riophae/vue-treeselect/dist/vue-treeselect.css'
 
 // crud交由presenter持有
-const defaultCrud = CRUD({ title: '角色', url: 'api/roles', sort: 'level,asc', crudMethod: { ...crudRoles }})
-const defaultForm = { id: null, name: null, depts: [], remark: null, dataScope: '全部', level: 3, permission: null }
+const defaultCrud = CRUD({ title: '角色', url: 'api/sys/sys/roles', sort: 'level,asc', crudMethod: { ...crudRoles }})
+const defaultForm = { coder: null, name: null, depts: [], remark: null, dataScope: '全部', level: 3, permission: null }
 export default {
   name: 'Role',
   components: { Treeselect, pagination, crudOperation, rrOperation, udOperation },
@@ -144,8 +144,8 @@ export default {
     return {
       defaultProps: { children: 'children', label: 'label' },
       dateScopes: ['全部', '本级', '自定义'], level: 3,
-      currentId: 0, menuLoading: false, showButton: false,
-      menus: [], menuIds: [], depts: [],
+      currentId: 0, resourceLoading: false, showButton: false,
+      resources: [], coders: [], depts: [],
       permission: {
         add: ['admin', 'roles:add'],
         edit: ['admin', 'roles:edit'],
@@ -162,7 +162,7 @@ export default {
     }
   },
   created() {
-    this.getMenus()
+    this.getResources()
     crudRoles.getLevel().then(data => {
       this.level = data.level
       console.log(this.level)
@@ -173,7 +173,7 @@ export default {
   },
   methods: {
     [CRUD.HOOK.afterRefresh]() {
-      this.$refs.menu.setCheckedKeys([])
+      this.$refs.resource.setCheckedKeys([])
     },
     // 编辑前
     [CRUD.HOOK.beforeToEdit](crud, form) {
@@ -182,7 +182,7 @@ export default {
       }
       const depts = []
       form.depts.forEach(function(dept, index) {
-        depts.push(dept.id)
+        depts.push(dept.coder)
       })
       form.depts = depts
     },
@@ -197,7 +197,7 @@ export default {
       } else if (crud.form.dataScope === '自定义') {
         const depts = []
         crud.form.depts.forEach(function(data, index) {
-          const dept = { id: data }
+          const dept = { coder: data }
           depts.push(dept)
         })
         crud.form.depts = depts
@@ -215,14 +215,14 @@ export default {
     afterErrorMethod(crud) {
       const depts = []
       crud.form.depts.forEach(function(dept, index) {
-        depts.push(dept.id)
+        depts.push(dept.coder)
       })
       crud.form.depts = depts
     },
     // 获取所有菜单
-    getMenus() {
+    getResources() {
       getResourcesTree().then(res => {
-        this.menus = res
+        this.resources = res
       })
     },
     // 触发单选
@@ -230,38 +230,38 @@ export default {
       if (val) {
         const _this = this
         // 清空菜单的选中
-        this.$refs.menu.setCheckedKeys([])
-        // 保存当前的角色id
-        this.currentId = val.id
+        this.$refs.resource.setCheckedKeys([])
+        // 保存当前的角色coder
+        this.currentId = val.coder
         this.showButton = this.level <= val.level
         // 初始化
-        this.menuIds = []
+        this.coders = []
         // 菜单数据需要特殊处理
-        val.menus.forEach(function(data, index) {
-          _this.menuIds.push(data.id)
+        val.resources.forEach(function(data, index) {
+          _this.coders.push(data.coder)
         })
       }
     },
     // 保存菜单
-    saveMenu() {
-      this.menuLoading = true
-      const role = { id: this.currentId, menus: [] }
+    saveResource() {
+      this.resourceLoading = true
+      const role = { coder: this.currentId, resources: [] }
       // 得到半选的父节点数据，保存起来
-      this.$refs.menu.getHalfCheckedNodes().forEach(function(data, index) {
-        const menu = { id: data.id }
-        role.menus.push(menu)
+      this.$refs.resource.getHalfCheckedNodes().forEach(function(data, index) {
+        const resource = { coder: data.coder }
+        role.resources.push(resource)
       })
       // 得到已选中的 key 值
-      this.$refs.menu.getCheckedKeys().forEach(function(data, index) {
-        const menu = { id: data }
-        role.menus.push(menu)
+      this.$refs.resource.getCheckedKeys().forEach(function(data, index) {
+        const resource = { coder: data }
+        role.resources.push(resource)
       })
-      crudRoles.editMenu(role).then(res => {
+      crudRoles.editResource(role).then(res => {
         this.crud.notify('保存成功', CRUD.NOTIFICATION_TYPE.SUCCESS)
-        this.menuLoading = false
+        this.resourceLoading = false
         this.update()
       }).catch(err => {
-        this.menuLoading = false
+        this.resourceLoading = false
         console.log(err.response.data.message)
       })
     },
@@ -270,7 +270,7 @@ export default {
       // 无刷新更新 表格数据
       crudRoles.get(this.currentId).then(res => {
         for (let i = 0; i < this.crud.data.length; i++) {
-          if (res.id === this.crud.data[i].id) {
+          if (res.coder === this.crud.data[i].coder) {
             this.crud.data[i] = res
             break
           }

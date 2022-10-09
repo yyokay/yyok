@@ -103,7 +103,7 @@ import crudOperation from '@crud/CRUD.operation'
 import pagination from '@crud/Pagination'
 
 // crud交由presenter持有
-const defaultCrud = CRUD({ title: '图片', url: 'api/pictures', crudMethod: { ...crudPic }})
+const defaultCrud = CRUD({ title: '图片', url: 'api/sys/pictures', crudMethod: { ...crudPic }})
 export default {
   name: 'Pictures',
   components: { pagination, crudOperation, rrOperation },

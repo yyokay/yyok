@@ -125,7 +125,7 @@ import crudOperation from '@crud/CRUD.operation'
 import pagination from '@crud/Pagination'
 
 // crud交由presenter持有
-const defaultCrud = CRUD({ title: '文件', url: 'api/localStorage', crudMethod: { ...crudFile }})
+const defaultCrud = CRUD({ title: '文件', url: 'api/sys/localStorage', crudMethod: { ...crudFile }})
 const defaultForm = { id: null, name: '' }
 export default {
   components: { pagination, crudOperation, rrOperation },

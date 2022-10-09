@@ -24,7 +24,7 @@ export const filterAsyncRouter = (routers) => { // 遍历后台传来的路由�
     if (router.component) {
       if (router.component === 'Layout') { // Layout组件特殊处理
         router.component = Layout
-      } else {
+      }else {
         const component = router.component
         router.component = loadView(component)
       }

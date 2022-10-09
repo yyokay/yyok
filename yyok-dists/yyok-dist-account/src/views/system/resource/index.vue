@@ -84,7 +84,7 @@
           <el-input v-model="form.component" style="width: 178px;" placeholder="组件路径" />
         </el-form-item>
         <el-form-item label="上级类目" prop="pid">
-          <treeselect v-model="form.pid" :options="menus" style="width: 450px;" placeholder="选择上级类目" />
+          <treeselect v-model="form.pid" :options="resources" style="width: 450px;" placeholder="选择上级类目" />
         </el-form-item>
       </el-form>
       <div slot="footer" class="dialog-footer">
@@ -132,7 +132,7 @@
           <span>{{ parseTime(scope.row.createTime) }}</span>
         </template>
       </el-table-column>
-      <el-table-column v-permission="['admin','menu:edit','menu:del']" label="操作" width="130px" align="center" fixed="right">
+      <el-table-column v-permission="['admin','resource:edit','resource:del']" label="操作" width="130px" align="center" fixed="right">
         <template slot-scope="scope">
           <udOperation
             :data="scope.row"
@@ -146,7 +146,7 @@
 </template>
 
 <script>
-import crudMenu from '@/api/system/resource'
+import crudResource from '@/api/system/resource'
 import IconSelect from '@/components/IconSelect'
 import Treeselect from '@riophae/vue-treeselect'
 import '@riophae/vue-treeselect/dist/vue-treeselect.css'
@@ -156,19 +156,19 @@ import crudOperation from '@crud/CRUD.operation'
 import udOperation from '@crud/UD.operation'
 
 // crud交由presenter持有
-const defaultCrud = CRUD({ title: '菜单', url: 'api/sys/resources', crudMethod: { ...crudMenu }})
-const defaultForm = { id: null, name: null, sort: 999, path: null, component: null, componentName: null, iframe: false, roles: [], pid: 0, icon: null, cache: false, hidden: false, type: 0, permission: null }
+const defaultCrud = CRUD({ title: '菜单', url: 'api/sys/sys/resources', crudMethod: { ...crudResource }})
+const defaultForm = { coder: null, name: null, sort: 999, path: null, component: null, componentName: null, iframe: false, roles: [], pid: 0, icon: null, cache: false, hidden: false, type: 0, permission: null }
 export default {
-  name: 'Menu',
+  name: 'Resource',
   components: { Treeselect, IconSelect, crudOperation, rrOperation, udOperation },
   mixins: [presenter(defaultCrud), header(), form(defaultForm), crud()],
   data() {
     return {
-      menus: [],
+      resources: [],
       permission: {
-        add: ['admin', 'menu:add'],
-        edit: ['admin', 'menu:edit'],
-        del: ['admin', 'menu:del']
+        add: ['admin', 'resource:add'],
+        edit: ['admin', 'resource:edit'],
+        del: ['admin', 'resource:del']
       },
       rules: {
         name: [
@@ -183,11 +183,11 @@ export default {
   methods: {
     // 新增与编辑前做的操作
     [CRUD.HOOK.afterToCU](crud, form) {
-      crudMenu.getResourcesTree().then(res => {
-        this.menus = []
-        const menu = { id: 0, label: '顶级类目', children: [] }
-        menu.children = res
-        this.menus.push(menu)
+      crudResource.getResourcesTree().then(res => {
+        this.resources = []
+        const resource = { id: 0, label: '顶级类目', children: [] }
+        resource.children = res
+        this.resources.push(resource)
       })
     },
     // 选中图标

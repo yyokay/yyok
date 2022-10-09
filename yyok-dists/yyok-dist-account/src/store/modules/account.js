@@ -5,6 +5,7 @@ const account = {
   state: {
     token: getToken(),
     user: {},
+    account: {},
     roles: [],
     // 第一次加载菜单时用到
     loadResources: false
@@ -36,7 +37,7 @@ const account = {
         login(userInfo.username, userInfo.password, userInfo.code, userInfo.uuid).then(res => {
           setToken(res.token, rememberMe)
           commit('SET_TOKEN', res.token)
-          setUserInfo(res.account, commit)
+          setAccountInfo(res.account, commit)
           // 第一次加载菜单时用到， 具体见 src 目录下的 permission.js
           commit('SET_LOAD_RESOURCES', true)
           resolve()
@@ -50,7 +51,7 @@ const account = {
     GetInfo({ commit }) {
       return new Promise((resolve, reject) => {
         getInfo().then(res => {
-          setUserInfo(res, commit)
+          setAccountInfo(res, commit)
           resolve(res)
         }).catch(error => {
           reject(error)
@@ -84,13 +85,14 @@ export const logOut = (commit) => {
   removeToken()
 }
 
-export const setUserInfo = (res, commit) => {
+export const setAccountInfo = (res, commit) => {
   // 如果没有任何权限，则赋予一个默认的权限，避免请求死循环
   if (res.roles.length === 0) {
     commit('SET_ROLES', ['ROLE_SYSTEM_DEFAULT'])
   } else {
     commit('SET_ROLES', res.roles)
   }
+  commit('SET_ACCOUNT', res)
   commit('SET_USER', res)
 }
 

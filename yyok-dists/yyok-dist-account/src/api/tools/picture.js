@@ -2,7 +2,7 @@ import request from '@/utils/request'
 
 export function del(ids) {
   return request({
-    url: 'api/pictures',
+    url: 'api/sys/pictures',
     method: 'delete',
     data: ids
   })
@@ -10,7 +10,7 @@ export function del(ids) {
 
 export function sync() {
   return request({
-    url: 'api/pictures/synchronize',
+    url: 'api/sys/pictures/synchronize',
     method: 'post'
   })
 }

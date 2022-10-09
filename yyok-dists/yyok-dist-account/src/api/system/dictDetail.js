@@ -7,7 +7,7 @@ export function get(dictName) {
     size: 9999
   }
   return request({
-    url: 'api/sys/dictDetail',
+    url: 'api/sys/sys/dictDetail',
     method: 'get',
     params
   })
@@ -20,7 +20,7 @@ export function getDictMap(dictName) {
     size: 9999
   }
   return request({
-    url: 'api/sys/dictDetail/map',
+    url: 'api/sys/sys/dictDetail/map',
     method: 'get',
     params
   })

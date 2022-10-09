@@ -64,7 +64,7 @@ import crudOperation from '@crud/CRUD.operation'
 import pagination from '@crud/Pagination'
 
 // crud交由presenter持有
-const defaultCrud = CRUD({ url: 'api/generator/tables' })
+const defaultCrud = CRUD({ url: 'api/sys/generator/tables' })
 export default {
   name: 'GeneratorIndex',
   components: { pagination, crudOperation, rrOperation },

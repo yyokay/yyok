@@ -69,7 +69,7 @@ import udOperation from '@crud/UD.operation'
 // crud交由presenter持有
 const crud = CRUD({
   title: '岗位',
-  url: 'api/job',
+  url: 'api/sys/job',
   sort: ['sort,asc', 'id,desc'],
   crudMethod: { ...crudJob }
 })
