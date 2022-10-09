@@ -31,4 +31,10 @@ public class ResourceVo implements Serializable {
     private ResourceMetaVo meta;
 
     private List<ResourceVo> children;
+
+    private String url;
+
+    private String uri;
+
+    private String method;
 }

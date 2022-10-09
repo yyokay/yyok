@@ -1,8 +1,8 @@
 package com.yyok.api.bbs.controller;
 
-import com.liang.bbs.rest.config.login.NoNeedLogin;
-import com.liang.bbs.rest.config.swagger.ApiVersion;
-import com.liang.bbs.rest.config.swagger.ApiVersionConstant;
+import com.yyok.api.bbs.rest.config.login.NoNeedLogin;
+import com.yyok.api.bbs.rest.config.swagger.ApiVersion;
+import com.yyok.api.bbs.rest.config.swagger.ApiVersionConstant;
 import com.liang.manage.auth.facade.dto.user.UserDTO;
 import com.liang.manage.auth.facade.dto.user.UserLoginDTO;
 import com.liang.manage.auth.facade.dto.user.UserTokenDTO;

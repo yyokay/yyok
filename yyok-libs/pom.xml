@@ -36,6 +36,7 @@
         <module>yyok-lib-bbs</module>
         <module>yyok-lib-ods</module>
         <module>yyok-lib-views</module>
+        <module>yyok-lib-ods/yyok-lib-ods-source</module>
     </modules>
 
 </project>

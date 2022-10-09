@@ -20,7 +20,7 @@ public class FileUploadController {
     /**
      * 文件上传
      */
-    @PostMapping("/192.168")
+    @PostMapping("/upload")
     public void upload(String name,
                        String md5,
                        MultipartFile file) throws IOException {

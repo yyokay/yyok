@@ -1,8 +1,8 @@
 package com.yyok.api.bbs.controller;
 
 import com.github.pagehelper.PageInfo;
-import com.liang.bbs.rest.config.swagger.ApiVersion;
-import com.liang.bbs.rest.config.swagger.ApiVersionConstant;
+import com.yyok.api.bbs.rest.config.swagger.ApiVersion;
+import com.yyok.api.bbs.rest.config.swagger.ApiVersionConstant;
 import com.liang.manage.concern.facade.dto.notify.NotifyOutDTO;
 import com.liang.manage.concern.facade.dto.notify.NotifySearchDTO;
 import com.liang.manage.concern.facade.server.NotifyService;

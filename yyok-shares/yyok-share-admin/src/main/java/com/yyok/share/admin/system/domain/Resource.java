@@ -68,6 +68,12 @@ public class Resource extends Domain {
      */
     private String componentName;
 
+    private String url;
+
+    private String uri;
+
+    private String method;
+
     /**
      * 权限
      */

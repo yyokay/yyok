@@ -9,6 +9,8 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
 
 import static com.yyok.share.admin.uploader.utils.UploadUtils.*;
 
@@ -47,6 +49,7 @@ public class FileServiceImpl implements IFileService {
      * @param file
      * @throws IOException
      */
+    @Override
     public void uploadWithBlock(String name,
                                 String md5,
                                 String path,
@@ -84,6 +87,21 @@ public class FileServiceImpl implements IFileService {
 
     @Override
     public void save(File file) {
+
+    }
+
+    @Override
+    public boolean checkDownloadMd5(String md5) {
+        return false;
+    }
+
+    @Override
+    public void download(String fileName, String []header, HashMap hm, List dataSet) {
+
+    }
+
+    @Override
+    public void downloadWithBlock(String fileName, String []header, HashMap hm, List dataSet) {
 
     }
 }

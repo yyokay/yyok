@@ -27,6 +27,11 @@ public class ResourceDto implements Serializable {
 
     private String url;
 
+    private String uri;
+
+    private String method;
+
+
     private String component;
 
     private String pcode;

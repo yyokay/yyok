@@ -28,7 +28,7 @@ Idea、webstorm、vscode
 
 2、下载代码
 ```
-git clone https://gitee.com/guchengwuyue/yshopmall.git
+git clone https://gitee.com/guchengwuyue/yyokmall.git
 ```
 3、idea打开项目加载依赖目录如下：
 
@@ -55,7 +55,7 @@ git clone https://gitee.com/guchengwuyue/yshopmall.git
 
 2、下载代码
 ```
-git clone https://gitee.com/guchengwuyue/yshopmall_qd
+git clone https://gitee.com/guchengwuyue/yyokmall_qd
 ```
 3、cnpm install或者yarn install,当前所有命令必须当前工程目录下进行，目录结构如下：
 
@@ -79,11 +79,11 @@ git clone https://gitee.com/guchengwuyue/yshopmall_qd
 ```
 server{ 
  listen 443 ssl;
- server_name yshopapi.dayouqiantu.cn;
+ server_name yyokapi.dayouqiantu.cn;
         #listen [::]:81 default_server ipv6only=on;
  #ssl on;
- ssl_certificate httpssl/3034302_yshopapi.dayouqiantu.cn.pem;
- ssl_certificate_key httpssl/3034302_yshopapi.dayouqiantu.cn.key;
+ ssl_certificate httpssl/3034302_yyokapi.dayouqiantu.cn.pem;
+ ssl_certificate_key httpssl/3034302_yyokapi.dayouqiantu.cn.key;
  ssl_session_timeout 5m;
  ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;
     ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
@@ -103,7 +103,7 @@ server{
  }
  
       
- access_log  /home/wwwlogs/yshopapi.log;
+ access_log  /home/wwwlogs/yyokapi.log;
  
 }
 ```
@@ -113,7 +113,7 @@ server{
 ```
 server{ 
  listen 80;
- server_name yshopapi.dayouqiantu.cn;
+ server_name yyokapi.dayouqiantu.cn;
         #listen [::]:81 default_server ipv6only=on;
 
  #error_page   404   /404.html;
@@ -128,7 +128,7 @@ server{
          proxy_set_header Connection "upgrade";
  }
   
- access_log  /home/wwwlogs/yshopapi.log;
+ access_log  /home/wwwlogs/yyokapi.log;
  
 }
 ```
@@ -155,7 +155,7 @@ server
     ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
     ssl_prefer_server_ciphers on;
     index index.html;
-    root /home/wwwroot/system/yshop;
+    root /home/wwwroot/system/yyok;
 
 
     location / {
@@ -182,7 +182,7 @@ server
         }
  
       
- access_log  /home/wwwlogs/yshop.log;
+ access_log  /home/wwwlogs/yyok.log;
  
 }
 
@@ -195,31 +195,31 @@ server
 
 - 1、创建一个存储第三方软件服务Docker Compose文件目录：
 ```
-     mkdir -p /yshop/soft
+     mkdir -p /yyok/soft
 ```
 - 2、然后在该目录下新建一个docker-compose.yml文件：
 ```
-    vim /yshop/soft/docker-compose.yml
+    vim /yyok/soft/docker-compose.yml
 ```
 - 3、接着创建上面docker-compose.yml里定义的挂载目录：
 ```
-    mkdir -p /yshop/mysql/data /yshop/redis/data /yshop/redis/conf
+    mkdir -p /yyok/mysql/data /yyok/redis/data /yyok/redis/conf
 ```
 - 4、创建Redis配置文件redis.conf：
 ```
-    touch /yshop/redis/conf/redis.conf
+    touch /yyok/redis/conf/redis.conf
 ```
 - 5、docker 部署参考根目录docker文件夹
 - 6、以上创建好之后参考docker下文件，先执行软件安装：
 ```
-  cd /yshop/soft
+  cd /yyok/soft
   docker-compose up -d  启动
   docker ps -a 查看镜像
 ```
 - 7、运行docker/applicatiion目录下 docker-compose,当然之前一定要打包jar包，构建镜像
   切换到Dockerfile 文件下：
   ```
-  docker build -t yshop-admin .  
+  docker build -t yyok-admin .  
   ```
 
 # 项目说明

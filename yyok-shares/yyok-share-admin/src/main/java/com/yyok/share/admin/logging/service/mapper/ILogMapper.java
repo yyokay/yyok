@@ -18,8 +18,8 @@ import java.util.List;
 @Mapper
 public interface ILogMapper extends ICoreMapper<Log> {
 
-    @Delete("delete from sys_log where typer = #{logType}")
-    void deleteByLogType(@Param("logType") String logType);
+    @Delete("delete from sys_log where typer = #{typer}")
+    void deleteByLogType(@Param("typer") String typer);
 
     @Select("<script>select l.coder,l.create_time as createTime,l.remark, l.request_ip as requestIp,l.address,u.nickname from sys_log l  " +
             " left join sys_account u on u.coder=l.account_code where l.typer=1 " +

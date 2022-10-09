@@ -30,6 +30,8 @@ public class RedisInitCommandLineRunner implements CommandLineRunner {
     //@Autowired
     //private IGroupService groupService;
 
+
+
     public void redisInitInfoCommandLineRunner() {
         List<Map<String, Object>> accountList = accountService.listMaps();
         for (Map<String, Object> m : accountList) {

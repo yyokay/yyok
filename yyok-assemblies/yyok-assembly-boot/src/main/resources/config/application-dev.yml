@@ -75,19 +75,19 @@ spring:
       datasource:
         master:
           type: com.zaxxer.hikari.HikariDataSource
-          url: jdbc:mysql://192.168.10.36:3306/yyok_admin?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useSSL=false&zeroDateTimeBehavior=convertToNull
+          url: jdbc:mysql://192.168.10.34:3306/yyok_admin?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useSSL=false&zeroDateTimeBehavior=convertToNull
           username: root
           password: root
           driver-class-name: com.mysql.cj.jdbc.Driver
         slave:
           driverClassName: com.mysql.cj.jdbc.Driver
-          url: jdbc:mysql://192.168.10.39:3306/yyok_admin?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useSSL=false&zeroDateTimeBehavior=convertToNull&allowPublicKeyRetrieval=true
+          url: jdbc:mysql://192.168.10.34:3306/yyok_admin?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useSSL=false&zeroDateTimeBehavior=convertToNull&allowPublicKeyRetrieval=true
           username: root
           password: root
           driver-class-name: com.mysql.cj.jdbc.Driver
         test:
           driverClassName: com.mysql.cj.jdbc.Driver
-          url: jdbc:mysql://192.168.10.36:3306/szzd_test?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useSSL=false&zeroDateTimeBehavior=convertToNull&allowPublicKeyRetrieval=true
+          url: jdbc:mysql://192.168.10.34:3306/yyok_info?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useSSL=false&zeroDateTimeBehavior=convertToNull&allowPublicKeyRetrieval=true
           username: root
           password: root
           driver-class-name: com.mysql.cj.jdbc.Driver

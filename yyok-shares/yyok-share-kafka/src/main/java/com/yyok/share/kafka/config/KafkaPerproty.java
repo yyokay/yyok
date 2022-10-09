@@ -49,6 +49,18 @@ public class KafkaPerproty {
     @Value("${spring.kafka.consumer.concurrency}")
     private int concurrency;
 
+    /**
+     * ProducerConfigs
+     */
+    @Value("${spring.kafka.producer.retries}")
+    private int retries;
+    @Value("${spring.kafka.producer.batch.size}")
+    private int batchSize;
+    @Value("${spring.kafka.producer.linger}")
+    private int linger;
+    @Value("${spring.kafka.producer.buffer.memory}")
+    private int bufferMemory;
+
     @Bean
     public KafkaListenerContainerFactory<ConcurrentMessageListenerContainer<String, String>> kafkaListenerContainerFactory() {
         ConcurrentKafkaListenerContainerFactory<String, String> factory = new ConcurrentKafkaListenerContainerFactory<>();
@@ -201,14 +213,6 @@ public class KafkaPerproty {
         return container;
     }
 
-    @Value("${spring.kafka.producer.retries}")
-    private int retries;
-    @Value("${spring.kafka.producer.batch.size}")
-    private int batchSize;
-    @Value("${spring.kafka.producer.linger}")
-    private int linger;
-    @Value("${spring.kafka.producer.buffer.memory}")
-    private int bufferMemory;
 
     public Map<String, Object> producerConfigs() {
         Map<String, Object> props = new HashMap<>();

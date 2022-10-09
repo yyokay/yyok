@@ -1,13 +1,13 @@
 package com.yyok.api.bbs.controller;
 
 import com.github.pagehelper.PageInfo;
-import com.liang.bbs.article.facade.dto.LabelDTO;
-import com.liang.bbs.article.facade.dto.LabelSearchDTO;
-import com.liang.bbs.article.facade.server.LabelService;
-import com.liang.bbs.rest.config.login.NoNeedLogin;
-import com.liang.bbs.rest.config.swagger.ApiVersion;
-import com.liang.bbs.rest.config.swagger.ApiVersionConstant;
-import com.liang.bbs.rest.utils.FileLengthUtils;
+import com.yyok.api.bbs.article.facade.dto.LabelDTO;
+import com.yyok.api.bbs.article.facade.dto.LabelSearchDTO;
+import com.yyok.api.bbs.article.facade.server.LabelService;
+import com.yyok.api.bbs.rest.config.login.NoNeedLogin;
+import com.yyok.api.bbs.rest.config.swagger.ApiVersion;
+import com.yyok.api.bbs.rest.config.swagger.ApiVersionConstant;
+import com.yyok.api.bbs.rest.utils.FileLengthUtils;
 import com.liang.nansheng.common.auth.UserContextUtils;
 import com.liang.nansheng.common.auth.UserSsoDTO;
 import com.liang.nansheng.common.enums.ResponseCode;

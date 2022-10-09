@@ -8,8 +8,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
 import org.springframework.boot.web.servlet.server.ServletWebServerFactory;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Primary;
+import org.springframework.core.env.Environment;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -17,6 +19,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 
 /**
  * @author yyok
@@ -33,8 +37,27 @@ public class YYOKApplicationBootstrap {
 
     public static void main(String[] args) throws Exception{
 
-        SpringApplication.run(YYOKApplicationBootstrap.class, args);
-        System.out.println("--------------------启动成功 ---------------------");
+        ApplicationContext application = SpringApplication.run(YYOKApplicationBootstrap.class, args);
+
+        Environment env = application.getEnvironment();
+        String ip;
+        try {
+            ip = InetAddress.getLocalHost().getHostAddress();
+        } catch (UnknownHostException e) {
+            throw new RuntimeException(e);
+        }
+        String port = env.getProperty("server.port");
+        String appName = env.getProperty("spring.application.name");
+        String path = env.getProperty("server.servlet.context-path");
+
+        String msg = "\n---------------------------------------------------------------------------"
+                + "\n\tApplication "+ appName + " is running! Access URLs:"
+                + "\n\tLocal: \t\thttp://localhost:" + port
+                + "\n\tExternal: \thttp://" + ip + ":" + port
+                + "\n\tDocs: \thttp://" + ip + ":" + port+"/doc.html"
+                + "\n-----------------------------------启动成功------------------------------------"
+                ;
+        System.out.println(msg);
     }
 
     @Bean("springContextHolders")

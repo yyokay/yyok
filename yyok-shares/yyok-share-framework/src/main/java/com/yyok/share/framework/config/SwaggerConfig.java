@@ -11,7 +11,6 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplicat
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
-import org.springframework.core.Ordered;
 import org.springframework.data.domain.Pageable;
 import springfox.bean.validators.configuration.BeanValidatorPluginsConfiguration;
 import springfox.documentation.builders.ApiInfoBuilder;
@@ -41,6 +40,7 @@ import static springfox.documentation.schema.AlternateTypeRules.newRule;
  **/
 @Configuration
 @EnableSwagger2
+@EnableKnife4j
 //@EnableSwaggerBootstrapUI
 @ConditionalOnWebApplication
 public class SwaggerConfig {

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="yyok-share-redission" />
+        <module name="yyok-share-security-client" />
+        <module name="yyok-lib-mls" />
+        <module name="yyok-assembly-cloud-auth" />
+        <module name="yyok-api-views" />
+        <module name="yyok-lib-views" />
+        <module name="yyok-assembly-cloud-eureka" />
+        <module name="yyok-share-security-authentication" />
+        <module name="yyok-share-pki-core" />
+        <module name="yyok-acquisite-datax-executor" />
+        <module name="yyok-assembly-boot" />
+        <module name="yyok-assembly-cloud-config" />
+        <module name="yyok-share-util" />
+        <module name="yyok-acquisite-cdcs" />
+        <module name="yyok-acquisite-datax-core" />
+        <module name="yyok-share-pki-caclient" />
+        <module name="yyok-acquisite-datax-client" />
+        <module name="yyok-api-bbs" />
+        <module name="yyok-share-kafka" />
+        <module name="yyok-share-boot" />
+        <module name="yyok-share-security-authorization" />
+        <module name="yyok-share-nlp-text" />
+        <module name="yyok-lib-bbs-article" />
+        <module name="yyok-assembly-admin-client" />
+        <module name="yyok-share-admin" />
+        <module name="yyok-api-datax" />
+        <module name="yyok-lib-docs" />
+        <module name="yyok-lib-ods-source" />
+        <module name="yyok-assembly-admin-server" />
+        <module name="yyok-api-admin" />
+        <module name="yyok-share-security-social" />
+        <module name="yyok-lib-linuxs" />
+        <module name="yyok-share-framework" />
+        <module name="yyok-share-pki-caserver" />
+        <module name="yyok-assembly-client" />
+        <module name="yyok-share-security-core" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

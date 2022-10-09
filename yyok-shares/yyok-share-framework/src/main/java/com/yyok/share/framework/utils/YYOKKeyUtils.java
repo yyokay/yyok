@@ -57,7 +57,7 @@ public class YYOKKeyUtils {
     /**
      * 微信公众号service
      */
-    public static String getYshopWeiXinMpSevice() {
+    public static String getYYOKWeiXinMpSevice() {
         String yshopWeiXinMpSevice = "";//YYOKConstant.YSHOP_WEIXIN_MP_SERVICE;
         return yshopWeiXinMpSevice + getExtendValue();
     }

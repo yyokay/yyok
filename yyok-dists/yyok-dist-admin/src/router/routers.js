@@ -45,7 +45,7 @@ export const constantRouterMap = [
     ]
   },
   {
-    path: '/my',
+    path: '/shop',
     component: Layout,
     hidden: true,
     redirect: 'noredirect',
